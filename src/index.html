@@ -38,32 +38,61 @@
       href="https://fonts.googleapis.com/css2?family=Poppins&family=Vesper+Libre:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <!-- font icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- CSS (if using external file) -->
     <link rel="stylesheet" href="/src/styles/main.css" />
   </head>
 
   <body>
+    <!-- start ecommmerce app -->
     <div class="app">
+      <!-- start header -->
       <header class="main_header">
+        <!-- start logo -->
         <div class="logo">
           <img src="/public/logo/main_logo.png" alt="logo" width="150px" />
           <h3>Ecobazar</h3>
         </div>
+        <!-- end logo -->
+        <!-- start form -->
         <form action="" class="search">
+          <!-- icon -->
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <!-- serch input -->
           <input type="search" id="search_input" placeholder="search" />
+          <!-- search button -->
           <button class="btn_search" id="searchBtn">search</button>
         </form>
+        <!-- end form -->
+        <!-- start cart wrapper -->
         <div class="cart_wrapper">
-          <img src="/public/icons/Heart.png" alt="your save" />
+          <!-- favourite products -->
+          <div class="fav_products_box">
+            <img src="/public/icons/HeartSVG.svg" alt="" />
+          </div>
+          <!-- devider -->
           <span class="devider"></span>
-          <img src="/public/icons/Bag.png" alt="bag" />
-          <div class="card">
-            <h3 class="shopping">shopping cart:</h3>
-            <p class="cost">$0.00</p>
+          <!-- all products wanted -->
+          <div class="cart">
+            <img src="/public/icons/BagSVG.svg" alt="bag" />
+            <div class="cost_products">
+              <h3 class="shopping">shopping cart:</h3>
+              <p class="cost">$0.00</p>
+            </div>
           </div>
         </div>
+        <!-- end cart wrapper -->
       </header>
+      <!-- end header -->
     </div>
+    <!-- end ecommmerce app -->
   </body>
 </html>

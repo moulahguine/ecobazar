@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.5;
   min-height: 100vh;
   width: 100%;
@@ -42,4 +42,75 @@ img,
 picture {
   max-width: 100%;
   display: block;
+}
+
+.app {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.app .main_header {
+  width: clamp(375px, 100vw, 1920px);
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 100px;
+}
+.app .main_header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.app .main_header .logo img {
+  width: 32px;
+}
+.app .main_header .logo h3 {
+  font-size: 2em;
+  color: #0a1f0a;
+}
+.app .main_header form {
+  width: clamp(375px, 50vw, 611px);
+  border: solid 1px #a1a1a1;
+  border-radius: 6px;
+  padding: 0 0 0 12px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.app .main_header form i {
+  color: #a1a1a1;
+}
+.app .main_header form input[type=search] {
+  padding: 0 12px;
+  background-color: #ffffff;
+  text-transform: none;
+  width: 100%;
+}
+.app .main_header form .btn_search {
+  margin-left: auto;
+  padding: 15px 12px 15px 12px;
+  width: 150px;
+  background-color: #00b207;
+  color: #ffffff;
+  font-weight: 600;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+.app .main_header form .btn_search:hover {
+  background-color: #4e7d4e;
+}
+.app .main_header .cart_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.app .main_header .cart_wrapper .devider {
+  width: 1px;
+  height: 24px;
+  background-color: #dfdfdf;
+}
+.app .main_header .cart_wrapper .cart {
+  display: flex;
 }/*# sourceMappingURL=main.css.map */

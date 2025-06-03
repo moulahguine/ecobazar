@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 *,
 *::before,
 *::after {
@@ -13,7 +15,7 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: $font-family-base;
   line-height: 1.5;
   min-height: 100vh;
   width: 100%;

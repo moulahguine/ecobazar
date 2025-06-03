@@ -1,0 +1,89 @@
+@use "variables" as *;
+
+// start ecommerce app
+.app {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  // start header
+  .main_header {
+    width: clamp(375px, 100vw, 1920px);
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 100px;
+    // start logo
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      // logo img
+      img {
+        width: 32px;
+      }
+      // logo name
+      h3 {
+        font-size: $heading-02-400;
+        color: $green-gray-9;
+      }
+    }
+    // end logo
+    // start form
+    form {
+      width: clamp(375px, 50vw, 611px);
+      border: solid 1px $gray-light;
+      border-radius: 6px;
+      padding: 0 0 0 12px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      // search icon
+      i {
+        color: $gray-light;
+      }
+      // search input
+      input[type="search"] {
+        padding: 0 12px;
+        background-color: $white;
+        text-transform: none;
+        width: 100%;
+      }
+      // search button
+      .btn_search {
+        margin-left: auto;
+        padding: 15px 12px 15px 12px;
+        width: 150px;
+        background-color: $green-primary;
+        color: $white;
+        font-weight: $font-weight-semibold;
+        transition: background-color 0.3s ease-in-out;
+        cursor: pointer;
+        // search button :hover
+        &:hover {
+          background-color: $green-gray-6;
+        }
+      }
+    }
+    // end form
+    // start cart wrapper
+    .cart_wrapper {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      .devider {
+        width: 1px;
+        height: 24px;
+        background-color: $gray-very-light;
+      }
+      .cart {
+        display: flex;
+      }
+    }
+    // end cart wrapper
+  }
+  // end header
+}
+
+// end ecommerce app
