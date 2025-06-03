@@ -40,15 +40,29 @@
     />
 
     <!-- CSS (if using external file) -->
-    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/src/styles/main.css" />
   </head>
 
   <body>
     <div class="app">
       <header class="main_header">
-        <div class="logo"></div>
-        <form action="" class="search"></form>
-        <div class="cart_wrapper"></div>
+        <div class="logo">
+          <img src="/public/logo/main_logo.png" alt="logo" width="150px" />
+          <h3>Ecobazar</h3>
+        </div>
+        <form action="" class="search">
+          <input type="search" id="search_input" placeholder="search" />
+          <button class="btn_search" id="searchBtn">search</button>
+        </form>
+        <div class="cart_wrapper">
+          <img src="/public/icons/Heart.png" alt="your save" />
+          <span class="devider"></span>
+          <img src="/public/icons/Bag.png" alt="bag" />
+          <div class="card">
+            <h3 class="shopping">shopping cart:</h3>
+            <p class="cost">$0.00</p>
+          </div>
+        </div>
       </header>
     </div>
   </body>
