@@ -33,7 +33,7 @@
     // start form
     form {
       width: clamp(375px, 50vw, 611px);
-      border: solid 1px $gray-light;
+      border: solid 1px $gray-very-light;
       border-radius: 6px;
       padding: 0 0 0 12px;
       display: flex;
@@ -79,6 +79,14 @@
       }
       .cart {
         display: flex;
+        gap: 10px;
+        .cost_products {
+          h3 {
+            font-size: $body-sm-400;
+            font-weight: $font-weight-medium;
+            color: $gray-light;
+          }
+        }
       }
     }
     // end cart wrapper

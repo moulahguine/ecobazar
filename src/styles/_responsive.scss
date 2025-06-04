@@ -1,0 +1,35 @@
+@use "variables" as *;
+
+@media (max-width: $small-desktop) {
+  // start ecommerce app
+  .app {
+    // start header
+    .main_header {
+      justify-content: space-between;
+      padding: 10px 50px;
+      // start form
+      form {
+        width: 375px;
+
+        // search button
+        .btn_search {
+          width: 100px;
+          font-size: $body-md-400;
+          cursor: pointer;
+          // search button :hover
+          &:hover {
+            background-color: $green-gray-6;
+          }
+        }
+      }
+      // end form
+    }
+    // end header
+  }
+
+  // end ecommerce app
+}
+@media (max-width: $tablet) {
+}
+@media (max-width: $small-screen) {
+}

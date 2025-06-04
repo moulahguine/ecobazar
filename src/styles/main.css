@@ -72,7 +72,7 @@ picture {
 }
 .app .main_header form {
   width: clamp(375px, 50vw, 611px);
-  border: solid 1px #a1a1a1;
+  border: solid 1px #dfdfdf;
   border-radius: 6px;
   padding: 0 0 0 12px;
   display: flex;
@@ -113,4 +113,28 @@ picture {
 }
 .app .main_header .cart_wrapper .cart {
   display: flex;
+  gap: 10px;
+}
+.app .main_header .cart_wrapper .cart .cost_products h3 {
+  font-size: 0.75em;
+  font-weight: 500;
+  color: #a1a1a1;
+}
+
+@media (max-width: 1200px) {
+  .app .main_header {
+    justify-content: space-between;
+    padding: 10px 50px;
+  }
+  .app .main_header form {
+    width: 375px;
+  }
+  .app .main_header form .btn_search {
+    width: 100px;
+    font-size: 0.875em;
+    cursor: pointer;
+  }
+  .app .main_header form .btn_search:hover {
+    background-color: #4e7d4e;
+  }
 }/*# sourceMappingURL=main.css.map */
