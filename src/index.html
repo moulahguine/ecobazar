@@ -63,13 +63,18 @@
         </a>
         <!-- end logo -->
         <!-- start form -->
-        <form action="" class="search">
+        <form action="" id="search_form">
           <!-- icon -->
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <i id="search_input_icon" class="fa-solid fa-magnifying-glass"></i>
           <!-- serch input -->
-          <input type="search" id="search_input" placeholder="search" />
+          <input
+            autofocus
+            type="search"
+            id="search_input"
+            placeholder="search"
+          />
           <!-- search button -->
-          <button class="btn_search" id="searchBtn">search</button>
+          <button class="btn_search" id="search_btn">search</button>
         </form>
         <!-- end form -->
         <!-- start cart wrapper -->
@@ -94,5 +99,6 @@
       <!-- end header -->
     </div>
     <!-- end ecommmerce app -->
+    <script src="/dist/main.js"></script>
   </body>
 </html>

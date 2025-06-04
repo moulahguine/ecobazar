@@ -10,16 +10,9 @@
       // start form
       form {
         width: 375px;
-
         // search button
         .btn_search {
-          width: 100px;
           font-size: $body-md-400;
-          cursor: pointer;
-          // search button :hover
-          &:hover {
-            background-color: $green-gray-6;
-          }
         }
       }
       // end form
@@ -32,4 +25,38 @@
 @media (max-width: $tablet) {
 }
 @media (max-width: $small-screen) {
+  // start ecommerce app
+  .app {
+    // start header
+    .main_header {
+      // start form
+      position: relative;
+      z-index: 2;
+      form {
+        transition: all 0.3s ease-in-out;
+        position: absolute;
+        z-index: -1;
+        right: -80px;
+        border: 0;
+        i {
+          font-size: $heading-04-400;
+          color: $green-primary;
+          transition: color 0.3s ease-in-out;
+          cursor: pointer;
+          &:hover {
+            color: $green-dark;
+          }
+        }
+        input {
+          display: none;
+        }
+        .btn_search {
+          display: none;
+        }
+      }
+      // end form
+    }
+    // end header
+  }
+  // end ecommerce app
 }

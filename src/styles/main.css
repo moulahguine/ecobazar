@@ -130,11 +130,34 @@ picture {
     width: 375px;
   }
   .app .main_header form .btn_search {
-    width: 100px;
     font-size: 0.875em;
+  }
+}
+@media (max-width: 768px) {
+  .app .main_header {
+    position: relative;
+    z-index: 2;
+  }
+  .app .main_header form {
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    z-index: -1;
+    right: -80px;
+    border: 0;
+  }
+  .app .main_header form i {
+    font-size: 1.5em;
+    color: #00b207;
+    transition: color 0.3s ease-in-out;
     cursor: pointer;
   }
-  .app .main_header form .btn_search:hover {
-    background-color: #4e7d4e;
+  .app .main_header form i:hover {
+    color: #00740e;
+  }
+  .app .main_header form input {
+    display: none;
+  }
+  .app .main_header form .btn_search {
+    display: none;
   }
 }/*# sourceMappingURL=main.css.map */
