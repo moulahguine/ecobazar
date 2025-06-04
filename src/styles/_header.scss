@@ -72,6 +72,9 @@
       display: flex;
       align-items: center;
       gap: 15px;
+      .fav_products_box {
+        cursor: pointer;
+      }
       .devider {
         width: 1px;
         height: 24px;
@@ -80,6 +83,7 @@
       .cart {
         display: flex;
         gap: 10px;
+        cursor: pointer;
         .cost_products {
           h3 {
             font-size: $body-sm-400;

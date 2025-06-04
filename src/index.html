@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
       content="Ecobazar is your online destination for fresh groceries, organic products, and daily essentials. Shop smart, live healthy."
@@ -11,12 +11,12 @@
       name="keywords"
       content="Ecobazar, online grocery, organic food, fresh vegetables, fruits, eCommerce"
     />
-    <meta name="author" content="mohamed oulahguine" />
+    <meta name="author" content="Mohamed Oulahguine" />
 
     <title>Ecobazar</title>
 
     <!-- Favicon -->
-    <!-- <link rel="icon" href="/logo/favicon.ico" type="image/x-icon" /> -->
+    <link rel="icon" href="/logo/favicon.ico" type="image/x-icon" />
 
     <!-- Open Graph (for social media sharing) -->
     <meta
@@ -28,7 +28,7 @@
       content="Shop fresh groceries and organic products from Ecobazar."
     />
     <meta property="og:image" content="/images/ecobazar-preview.png" />
-    <!-- <meta property="og:url" content="https://www.ecobazar.com" /> -->
+    <meta property="og:url" content="https://www.ecobazar.com" />
     <meta property="og:type" content="website" />
 
     <!-- Google Fonts -->
@@ -38,7 +38,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins&family=Vesper+Libre:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <!-- font icons -->
+    <!-- Font Awesome Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -47,58 +47,97 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- CSS (if using external file) -->
+    <!-- Main CSS -->
     <link rel="stylesheet" href="/src/styles/main.css" />
   </head>
 
   <body>
-    <!-- start ecommmerce app -->
+    <!-- Start ecommerce app -->
     <div class="app">
-      <!-- start header -->
-      <header class="main_header">
-        <!-- start logo -->
-        <a class="logo" href="index.html">
-          <img src="/public/logo/main_logo.png" alt="logo" width="150px" />
+      <!-- Start header -->
+      <header class="main_header" role="banner">
+        <!-- Logo: clickable link to homepage -->
+        <a class="logo" href="index.html" aria-label="Go to homepage">
+          <img
+            src="/public/logo/main_logo.png"
+            alt="Ecobazar logo"
+            width="150"
+            height="auto"
+          />
           <h3>Ecobazar</h3>
         </a>
-        <!-- end logo -->
-        <!-- start form -->
-        <form action="" id="search_form">
-          <!-- icon -->
-          <i id="search_input_icon" class="fa-solid fa-magnifying-glass"></i>
-          <!-- serch input -->
+
+        <!-- Search form -->
+        <form
+          action="#"
+          id="search_form"
+          role="search"
+          aria-label="Site search"
+        >
+          <!-- Search icon: decorative -->
+          <i
+            id="search_input_icon"
+            class="fa-solid fa-magnifying-glass"
+            aria-hidden="true"
+          ></i>
+          <!-- Search input -->
           <input
-            autofocus
             type="search"
             id="search_input"
-            placeholder="search"
+            name="search"
+            placeholder="Search"
+            aria-label="Search products"
+            autofocus
           />
-          <!-- search button -->
-          <button class="btn_search" id="search_btn">search</button>
+          <!-- Search button -->
+          <button
+            class="btn_search"
+            id="search_btn"
+            type="submit"
+            aria-label="Submit search"
+          >
+            Search
+          </button>
         </form>
-        <!-- end form -->
-        <!-- start cart wrapper -->
-        <div class="cart_wrapper">
-          <!-- favourite products -->
-          <div class="fav_products_box">
-            <img src="/public/icons/HeartSVG.svg" alt="" />
+
+        <!-- Cart wrapper -->
+        <div
+          class="cart_wrapper"
+          role="region"
+          aria-label="Shopping cart and favorites"
+        >
+          <!-- Favorite products icon -->
+          <div
+            class="fav_products_box"
+            role="button"
+            tabindex="0"
+            aria-label="View favorite products"
+          >
+            <img src="/public/icons/HeartSVG.svg" alt="" aria-hidden="true" />
           </div>
-          <!-- devider -->
-          <span class="devider"></span>
-          <!-- all products wanted -->
-          <div class="cart">
-            <img src="/public/icons/BagSVG.svg" alt="bag" />
+
+          <!-- Divider -->
+          <span class="devider" aria-hidden="true"></span>
+
+          <!-- Shopping cart -->
+          <div
+            class="cart"
+            role="button"
+            tabindex="0"
+            aria-label="View shopping cart"
+          >
+            <img src="/public/icons/BagSVG.svg" alt="Shopping bag icon" />
             <div class="cost_products">
-              <h3 class="shopping">shopping cart:</h3>
-              <p class="cost">$0.00</p>
+              <h3 class="shopping">Shopping Cart:</h3>
+              <p class="cost" aria-live="polite" aria-atomic="true">$0.00</p>
             </div>
           </div>
         </div>
-        <!-- end cart wrapper -->
       </header>
-      <!-- end header -->
+      <!-- End header -->
     </div>
-    <!-- end ecommmerce app -->
-    <script src="/dist/main.js"></script>
+    <!-- End ecommerce app -->
+
+    <script src="/dist/main.js" defer></script>
   </body>
 </html>

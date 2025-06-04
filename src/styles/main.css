@@ -106,6 +106,9 @@ picture {
   align-items: center;
   gap: 15px;
 }
+.app .main_header .cart_wrapper .fav_products_box {
+  cursor: pointer;
+}
 .app .main_header .cart_wrapper .devider {
   width: 1px;
   height: 24px;
@@ -114,6 +117,7 @@ picture {
 .app .main_header .cart_wrapper .cart {
   display: flex;
   gap: 10px;
+  cursor: pointer;
 }
 .app .main_header .cart_wrapper .cart .cost_products h3 {
   font-size: 0.75em;
@@ -133,31 +137,37 @@ picture {
     font-size: 0.875em;
   }
 }
-@media (max-width: 768px) {
+@media (min-width: 526px) and (max-width: 768px) {
   .app .main_header {
     position: relative;
     z-index: 2;
   }
   .app .main_header form {
-    transition: all 0.3s ease-in-out;
     position: absolute;
-    z-index: -1;
     right: -80px;
     border: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
   }
   .app .main_header form i {
     font-size: 1.5em;
     color: #00b207;
-    transition: color 0.3s ease-in-out;
     cursor: pointer;
+    transition: color 0.3s ease-in-out;
   }
   .app .main_header form i:hover {
     color: #00740e;
   }
-  .app .main_header form input {
-    display: none;
-  }
+  .app .main_header form input,
   .app .main_header form .btn_search {
     display: none;
+  }
+}
+@media (max-width: 525px) {
+  .app .main_header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
   }
 }/*# sourceMappingURL=main.css.map */
