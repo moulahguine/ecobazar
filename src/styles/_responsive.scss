@@ -32,6 +32,9 @@
       z-index: 3;
       display: none;
     }
+    &.changeDisplay::before {
+      display: block;
+    }
     .main_header {
       form {
         display: none;

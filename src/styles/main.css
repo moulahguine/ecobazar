@@ -162,6 +162,9 @@ picture {
     z-index: 3;
     display: none;
   }
+  .app.changeDisplay::before {
+    display: block;
+  }
   .app .main_header form {
     display: none;
     position: fixed;

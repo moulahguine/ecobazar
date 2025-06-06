@@ -4,11 +4,13 @@ const searchInputIcon: any = document.querySelector<HTMLElement>(
 );
 const searchInput = document.querySelector<HTMLInputElement>("#search_input");
 const searchButton = document.querySelector<HTMLButtonElement>("#search_btn");
+const mainApp = document.querySelector(".app");
 
 const isSmallScreen = () => window.innerWidth <= 768;
 
 searchInputIcon.addEventListener("click", () => {
   searchForm.style.display = "flex";
+  mainApp?.classList.toggle("changeDisplay");
 });
 
 // if (searchForm && searchInputIcon) {
