@@ -25,5 +25,9 @@ A modern and responsive e-commerce website built with HTML, CSS, and JavaScript.
 
 - HTML5
 - CSS3 (or Tailwind/Sass if used)
-- JavaScript (Va
+- JavaScript (Vanilla JS / React / etc.)
+- [Optional: LocalStorage for cart data persistence]
+
+## 📁 Folder Structure
+
 
