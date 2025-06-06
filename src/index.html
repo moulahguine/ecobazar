@@ -48,7 +48,7 @@
     />
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="/src/styles/main.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
   </head>
 
   <body>
@@ -59,7 +59,7 @@
         <!-- Logo: clickable link to homepage -->
         <a class="logo" href="index.html" aria-label="Go to homepage">
           <img
-            src="/public/logo/main_logo.png"
+            src="/logo/main_logo.png"
             alt="Ecobazar logo"
             width="150"
             height="auto"
@@ -113,7 +113,7 @@
             tabindex="0"
             aria-label="View favorite products"
           >
-            <img src="/public/icons/HeartSVG.svg" alt="" aria-hidden="true" />
+            <img src="/icons/HeartSVG.svg" alt="" aria-hidden="true" />
           </div>
 
           <!-- Divider -->
@@ -126,7 +126,7 @@
             tabindex="0"
             aria-label="View shopping cart"
           >
-            <img src="/public/icons/BagSVG.svg" alt="Shopping bag icon" />
+            <img src="/icons/BagSVG.svg" alt="Shopping bag icon" />
             <div class="cost_products">
               <h3 class="shopping">Shopping Cart:</h3>
               <p class="cost" aria-live="polite" aria-atomic="true">$0.00</p>
@@ -150,6 +150,6 @@
     </div>
     <!-- End ecommerce app -->
 
-    <script src="/dist/main.js" defer></script>
+    <script type="module" src="/main.ts"></script>
   </body>
 </html>

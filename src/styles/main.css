@@ -47,7 +47,8 @@ picture {
 .app {
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .app .main_header {
   width: clamp(375px, 100vw, 1920px);
