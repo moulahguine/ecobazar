@@ -79,6 +79,7 @@ picture {
   display: flex;
   align-items: center;
   overflow: hidden;
+  background-color: #ffffff;
 }
 .app .main_header form i {
   color: #a1a1a1;
@@ -106,6 +107,16 @@ picture {
   display: flex;
   align-items: center;
   gap: 15px;
+}
+.app .main_header .cart_wrapper .search_btn_sscreen i {
+  display: none;
+  font-size: 1.5em;
+  color: #00b207;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+.app .main_header .cart_wrapper .search_btn_sscreen i:hover {
+  color: #4e7d4e;
 }
 .app .main_header .cart_wrapper .fav_products_box {
   cursor: pointer;
@@ -138,30 +149,30 @@ picture {
     font-size: 0.875em;
   }
 }
-@media (min-width: 526px) and (max-width: 768px) {
-  .app .main_header {
+@media (max-width: 768px) {
+  .app {
     position: relative;
-    z-index: 2;
+  }
+  .app::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.568627451);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 3;
+    display: none;
   }
   .app .main_header form {
-    position: absolute;
-    right: -80px;
-    border: 0;
-    transition: all 0.3s ease-in-out;
-    z-index: -1;
-  }
-  .app .main_header form i {
-    font-size: 1.5em;
-    color: #00b207;
-    cursor: pointer;
-    transition: color 0.3s ease-in-out;
-  }
-  .app .main_header form i:hover {
-    color: #00740e;
-  }
-  .app .main_header form input,
-  .app .main_header form .btn_search {
     display: none;
+    position: fixed;
+    transition: all 0.3s ease-in-out;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+  }
+  .app .main_header .cart_wrapper .search_btn_sscreen i {
+    display: block;
   }
 }
 @media (max-width: 525px) {

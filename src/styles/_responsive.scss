@@ -20,33 +20,34 @@
 @media (max-width: $tablet) {
 }
 
-@media (min-width: 526px) and (max-width: $small-screen) {
+@media /*(min-width: 526px) and*/ (max-width: $small-screen) {
   .app {
+    position: relative;
+    &::before {
+      content: "";
+      background-color: #00000091;
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      z-index: 3;
+      display: none;
+    }
     .main_header {
-      position: relative;
-      z-index: 2;
-
       form {
-        position: absolute;
-        right: -80px;
-        border: 0;
+        display: none;
+        position: fixed;
         transition: all 0.3s ease-in-out;
-        z-index: -1;
-
-        i {
-          font-size: $heading-04-400;
-          color: $green-primary;
-          cursor: pointer;
-          transition: color 0.3s ease-in-out;
-
-          &:hover {
-            color: $green-dark;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+      }
+      .cart_wrapper {
+        // search icon for small screen
+        .search_btn_sscreen {
+          i {
+            display: block;
           }
-        }
-
-        input,
-        .btn_search {
-          display: none;
         }
       }
     }

@@ -40,6 +40,7 @@
       display: flex;
       align-items: center;
       overflow: hidden;
+      background-color: $white;
       // search icon
       i {
         color: $gray-light;
@@ -73,6 +74,20 @@
       display: flex;
       align-items: center;
       gap: 15px;
+      // search icon for small screen
+      .search_btn_sscreen {
+        i {
+          display: none;
+          font-size: $heading-04-400;
+          color: $green-primary;
+          // margin-top: 5px;
+          transition: color 0.3s ease-in-out;
+          cursor: pointer;
+          &:hover {
+            color: $green-gray-6;
+          }
+        }
+      }
       .fav_products_box {
         cursor: pointer;
       }
