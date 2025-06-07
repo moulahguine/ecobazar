@@ -1,0 +1,11 @@
+@use "variables" as *;
+
+.app {
+  nav {
+    width: inherit;
+    ul {
+      width: inherit;
+      display: flex;
+    }
+  }
+}

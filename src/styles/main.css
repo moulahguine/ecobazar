@@ -137,6 +137,14 @@ picture {
   color: #a1a1a1;
 }
 
+.app nav {
+  width: inherit;
+}
+.app nav ul {
+  width: inherit;
+  display: flex;
+}
+
 @media (max-width: 1200px) {
   .app .main_header {
     justify-content: space-between;
