@@ -2,10 +2,16 @@
 
 .app {
   nav {
-    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $green-gray-9;
+    width: clamp(375px, 100vw, 1920px);
+    padding: 16px 210px;
     ul {
-      width: inherit;
+      color: white;
       display: flex;
+      gap: 20px;
     }
   }
 }

@@ -138,11 +138,17 @@ picture {
 }
 
 .app nav {
-  width: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0a1f0a;
+  width: clamp(375px, 100vw, 1920px);
+  padding: 16px 210px;
 }
 .app nav ul {
-  width: inherit;
+  color: white;
   display: flex;
+  gap: 20px;
 }
 
 @media (max-width: 1200px) {
