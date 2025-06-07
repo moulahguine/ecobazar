@@ -141,7 +141,7 @@ picture {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #0a1f0a;
+  background-color: #333333;
   width: clamp(375px, 100vw, 1920px);
   padding: 16px 210px;
 }

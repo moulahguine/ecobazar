@@ -15,16 +15,13 @@ navLinks.forEach((link) => {
     if (!href) return;
     console.log(href);
 
-    // Remove leading '#' from href to get target id
     const targetId = href.substring(1);
 
     if (targetId === "home") {
-      // Show all sections on "home"
       sections.forEach((section) => {
         section.style.display = "block";
       });
     } else {
-      // Show only the targeted section, hide others
       sections.forEach((section) => {
         section.style.display = section.id === targetId ? "block" : "none";
       });
