@@ -9,12 +9,15 @@ const mainApp = document.querySelector<HTMLElement>(".app");
 const isSmallScreen = () => window.innerWidth <= 768;
 
 if (searchForm && searchInputIcon && isSmallScreen()) {
-  searchInputIcon.addEventListener("click", () => {
+  // Show the form
+  searchInputIcon.addEventListener("click", (e) => {
+    e.stopPropagation();
     searchForm.style.display = "flex";
     mainApp?.classList.add("search_layout"); // ?
     searchInput?.focus();
   });
 
+  // hide the form
   mainApp?.addEventListener("click", (e) => {
     const target = e.target as Node;
     if (!searchForm.contains(target) && !searchInputIcon.contains(target)) {
