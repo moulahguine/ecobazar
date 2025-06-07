@@ -8,33 +8,11 @@ const mainApp = document.querySelector(".app");
 
 const isSmallScreen = () => window.innerWidth <= 768;
 
-searchInputIcon.addEventListener("click", () => {
-  searchForm.style.display = "flex";
-  mainApp?.classList.toggle("changeDisplay");
-});
-
-// if (searchForm && searchInputIcon) {
-//   searchForm.addEventListener(
-//     "focusout",
-//     (e) => {
-//       const relatedTarget = e.relatedTarget as HTMLElement | null;
-//       if (!searchForm.contains(relatedTarget)) {
-//         if (isSmallScreen()) {
-//           Object.assign(searchForm.style, {
-//             display: "block",
-//           });
-//         }
-//       }
-//     },
-//     true
-//   );
-//   document.addEventListener("click", (e) => {
-//     if (
-//       isSmallScreen() &&
-//       searchForm &&
-//       !searchForm.contains(e.target as Node)
-//     ) {
-//       searchForm.removeAttribute("style");
-//     }
-//   });
-// }
+if (searchForm && searchInputIcon) {
+  if (isSmallScreen()) {
+    searchInputIcon.addEventListener("click", () => {
+      searchForm.style.display = "flex";
+      mainApp?.classList.toggle("changeDisplay");
+    });
+  }
+}
