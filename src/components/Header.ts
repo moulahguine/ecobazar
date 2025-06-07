@@ -4,15 +4,22 @@ const searchInputIcon: any = document.querySelector<HTMLElement>(
 );
 const searchInput = document.querySelector<HTMLInputElement>("#search_input");
 const searchButton = document.querySelector<HTMLButtonElement>("#search_btn");
-const mainApp = document.querySelector(".app");
+const mainApp = document.querySelector<HTMLElement>(".app");
 
 const isSmallScreen = () => window.innerWidth <= 768;
 
-if (searchForm && searchInputIcon) {
-  if (isSmallScreen()) {
-    searchInputIcon.addEventListener("click", () => {
-      searchForm.style.display = "flex";
-      mainApp?.classList.toggle("changeDisplay");
-    });
-  }
+if (searchForm && searchInputIcon && isSmallScreen()) {
+  searchInputIcon.addEventListener("click", () => {
+    searchForm.style.display = "flex";
+    mainApp?.classList.add("search_layout"); // ?
+    searchInput?.focus();
+  });
+
+  mainApp?.addEventListener("click", (e) => {
+    const target = e.target as Node;
+    if (!searchForm.contains(target) && !searchInputIcon.contains(target)) {
+      searchForm.style.display = "none";
+      mainApp?.classList.remove("search_layout");
+    }
+  });
 }

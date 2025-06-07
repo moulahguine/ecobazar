@@ -162,16 +162,16 @@ picture {
     z-index: 3;
     display: none;
   }
-  .app.changeDisplay::before {
+  .app.search_layout::before {
     display: block;
   }
   .app .main_header form {
     display: none;
     position: fixed;
     transition: all 0.3s ease-in-out;
-    top: 50%;
+    top: 130px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     z-index: 4;
   }
   .app .main_header .cart_wrapper .search_btn_sscreen i {

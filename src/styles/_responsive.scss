@@ -32,7 +32,7 @@
       z-index: 3;
       display: none;
     }
-    &.changeDisplay::before {
+    &.search_layout::before {
       display: block;
     }
     .main_header {
@@ -40,9 +40,9 @@
         display: none;
         position: fixed;
         transition: all 0.3s ease-in-out;
-        top: 50%;
+        top: 130px;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translateX(-50%);
         z-index: 4;
       }
       .cart_wrapper {
