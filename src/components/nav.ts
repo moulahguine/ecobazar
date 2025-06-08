@@ -13,7 +13,6 @@ navLinks.forEach((link) => {
 
     const href = link.getAttribute("href");
     if (!href) return;
-    console.log(href);
 
     const targetId = href.substring(1);
 

@@ -143,12 +143,30 @@ picture {
   align-items: center;
   background-color: #333333;
   width: clamp(375px, 100vw, 1920px);
-  padding: 16px 210px;
+  padding: 0 150px;
 }
-.app nav ul {
+.app nav ul,
+.app nav .support_num {
   color: white;
   display: flex;
-  gap: 20px;
+  align-items: center;
+}
+.app nav ul li a,
+.app nav .support_num li a {
+  display: block;
+  padding: 1em;
+  transition: all 0.3s ease-in-out;
+}
+.app nav ul li a:hover,
+.app nav .support_num li a:hover {
+  background-color: #a5d5a5;
+}
+.app nav .support_num {
+  cursor: pointer;
+}
+.app nav .support_num i {
+  margin-right: 10px;
+  font-size: 1.5em;
 }
 
 @media (max-width: 1200px) {

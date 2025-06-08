@@ -7,11 +7,29 @@
     align-items: center;
     background-color: $black;
     width: clamp(375px, 100vw, 1920px);
-    padding: 16px 210px;
-    ul {
+    padding: 0 150px;
+    ul,
+    .support_num {
       color: white;
       display: flex;
-      gap: 20px;
+      align-items: center;
+      li {
+        a {
+          display: block;
+          padding: $body-lg-400;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            background-color: $green-gray-3;
+          }
+        }
+      }
+    }
+    .support_num {
+      cursor: pointer;
+      i {
+        margin-right: 10px;
+        font-size: $heading-04-400;
+      }
     }
   }
 }
