@@ -1,9 +1,10 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 .app {
   //  header
   .main_header {
-    width: clamp(375px, 100vw, 1920px);
+    @include clamp-width(375px, 100vw, 1920px);
     background-color: $white;
     display: grid;
     grid-template-columns: repeat(14, 1fr);
@@ -12,9 +13,7 @@
     //logo
     .logo {
       grid-column: 2/4;
-      display: flex;
-      align-items: center;
-      gap: $body-lg-400;
+      @include flex-center($body-lg-400);
       cursor: pointer;
       // logo img
       img {
@@ -29,7 +28,7 @@
     // form
     form {
       grid-column: 6/9;
-      width: clamp(375px, 50vw, 611px);
+      @include clamp-width(375px, 50vw, 611px);
       border: solid 1px $gray-very-light;
       border-radius: 6px;
       padding: 0 0 0 12px;
@@ -53,23 +52,15 @@
         margin-left: auto;
         padding: 17px 12px;
         width: 150px;
-        background-color: $green-primary;
         color: $white;
         font-weight: $font-weight-semibold;
-        transition: background-color 0.3s ease-in-out;
-        cursor: pointer;
-        // search button :hover
-        &:hover {
-          background-color: $green-gray-6;
-        }
+        @include btn-hover($green-primary, $green-gray-6);
       }
     }
     // cart wrapper
     .cart_wrapper {
       grid-column: 11/13;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      @include flex-center(10px);
       // search icon for small screen
       .search_btn_sscreen {
         i {

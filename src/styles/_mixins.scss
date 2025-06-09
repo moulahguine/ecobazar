@@ -1,0 +1,22 @@
+// flex and gap
+@mixin flex-center($gap: 0) {
+  display: flex;
+  align-items: center;
+  gap: $gap;
+}
+
+//btn and hover
+@mixin btn-hover($bg-color, $hover-color) {
+  background-color: $bg-color;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+// for width style
+@mixin clamp-width($min, $preferred, $max) {
+  width: clamp($min, $preferred, $max);
+}
