@@ -46,32 +46,37 @@ picture {
 
 .app {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: auto;
+  grid-template-areas: "hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr" "nav nav nav nav nav nav nav nav nav nav nav nav";
 }
+
 .app .main_header {
   width: clamp(375px, 100vw, 1920px);
   background-color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 10px 100px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  padding: 1.25em 0;
 }
 .app .main_header .logo {
+  grid-column: 2/4;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 1em;
   cursor: pointer;
 }
 .app .main_header .logo img {
-  width: 32px;
+  width: 2em;
 }
 .app .main_header .logo h3 {
   font-size: 2em;
   color: #0a1f0a;
 }
 .app .main_header form {
+  grid-column: 5/8;
   width: clamp(375px, 50vw, 611px);
   border: solid 1px #dfdfdf;
   border-radius: 6px;
@@ -104,6 +109,7 @@ picture {
   background-color: #4e7d4e;
 }
 .app .main_header .cart_wrapper {
+  grid-column: 10/13;
   display: flex;
   align-items: center;
   gap: 15px;
@@ -138,35 +144,54 @@ picture {
 }
 
 .app nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333333;
   width: clamp(375px, 100vw, 1920px);
-  padding: 0 150px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  background-color: #333333;
+  padding: 0 3em 0 6em;
+}
+.app nav ul {
+  grid-column: 1/8;
+}
+.app nav ul li a {
+  display: block;
+  padding: 1em;
+  transition: all 0.3s ease-in-out;
+}
+.app nav ul li a:hover {
+  background-color: #a5d5a5;
+}
+.app nav .support_num {
+  grid-column: 11/13;
+  cursor: copy;
+  position: relative;
+}
+.app nav .support_num .copy_msg {
+  position: absolute;
+  top: -25px;
+  right: 0;
+  background-color: #b7b7b7;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+.app nav .support_num.show_msg .copy_msg {
+  opacity: 1;
+}
+.app nav .support_num i {
+  margin-right: 10px;
+  font-size: 1.5em;
 }
 .app nav ul,
 .app nav .support_num {
   color: white;
   display: flex;
   align-items: center;
-}
-.app nav ul li a,
-.app nav .support_num li a {
-  display: block;
-  padding: 1em;
-  transition: all 0.3s ease-in-out;
-}
-.app nav ul li a:hover,
-.app nav .support_num li a:hover {
-  background-color: #a5d5a5;
-}
-.app nav .support_num {
-  cursor: pointer;
-}
-.app nav .support_num i {
-  margin-right: 10px;
-  font-size: 1.5em;
 }
 
 @media (max-width: 1200px) {
@@ -190,7 +215,7 @@ picture {
     background-color: rgba(0, 0, 0, 0.568627451);
     width: 100%;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     z-index: 3;
     display: none;
   }
@@ -216,5 +241,18 @@ picture {
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+  }
+  .app nav {
+    justify-content: center;
+    padding: 0;
+  }
+  .app nav .support_num {
+    display: none;
+  }
+  .app nav ul li a i {
+    display: block !important;
+  }
+  .app nav ul li a span {
+    display: none;
   }
 }/*# sourceMappingURL=main.css.map */

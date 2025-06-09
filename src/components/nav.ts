@@ -31,3 +31,23 @@ navLinks.forEach((link) => {
     // link.classList.add("active");
   });
 });
+
+const supportNum = document.querySelector<HTMLElement>(".support_num");
+const copyMsg = document.querySelector<HTMLElement>("#copyMsg");
+
+supportNum?.addEventListener("click", () => {
+  const phoneNumber = "(+90)554 882 65 67";
+
+  navigator.clipboard
+    .writeText(phoneNumber)
+    .then(() => {
+      supportNum.classList.add("show_msg");
+
+      setTimeout(() => {
+        supportNum.classList.remove("show_msg");
+      }, 1000);
+    })
+    .catch((err) => {
+      console.error("Failed to copy phone number:", err);
+    });
+});

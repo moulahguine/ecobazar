@@ -2,17 +2,14 @@
 
 .app {
   nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: $black;
     width: clamp(375px, 100vw, 1920px);
-    padding: 0 150px;
-    ul,
-    .support_num {
-      color: white;
-      display: flex;
-      align-items: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    background-color: $black;
+    padding: 0 3em 0 6em;
+    ul {
+      grid-column: 1/8;
       li {
         a {
           display: block;
@@ -25,11 +22,36 @@
       }
     }
     .support_num {
-      cursor: pointer;
+      grid-column: 11/13;
+      cursor: copy;
+      position: relative;
+      .copy_msg {
+        position: absolute;
+        top: -25px;
+        right: 0;
+        background-color: $gray-lighter;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 0.8rem;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        pointer-events: none;
+      }
+
+      &.show_msg .copy_msg {
+        opacity: 1;
+      }
       i {
         margin-right: 10px;
         font-size: $heading-04-400;
       }
+    }
+    ul,
+    .support_num {
+      color: white;
+      display: flex;
+      align-items: center;
     }
   }
 }

@@ -45,3 +45,14 @@ picture {
   max-width: 100%;
   display: block;
 }
+
+.app {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: auto;
+  grid-template-areas:
+    "hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr"
+    "nav nav nav nav nav nav nav nav nav nav nav nav";
+}

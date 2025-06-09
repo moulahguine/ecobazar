@@ -53,9 +53,9 @@
 
   <body>
     <!-- Start ecommerce app -->
-    <div class="app">
+    <div class="app" style="overflow: hidden">
       <!-- Start header -->
-      <header class="main_header" role="banner">
+      <header class="main_header" role="banner" style="grid-area: hdr">
         <!-- Logo: clickable link to homepage -->
         <a class="logo" href="index.html" aria-label="Go to homepage">
           <img
@@ -150,7 +150,7 @@
       </header>
       <!-- End header -->
       <!-- start nav -->
-      <nav class="main_navigation">
+      <nav class="main_navigation" style="grid-area: nav">
         <ul>
           <li>
             <a href="#home"
@@ -159,7 +159,7 @@
           </li>
           <li>
             <a href="#shop"
-              ><i class="fa-solid fa-shop"></i><span>shop</span></a
+              ><i class="fa-solid fa-cart-shopping"></i><span>shop</span></a
             >
           </li>
           <li>
@@ -187,6 +187,7 @@
         <div class="support_num">
           <i class="fa-solid fa-phone-volume"></i>
           <span> (+90)554 882 65 67</span>
+          <span class="copy_msg" id="copyMsg">Copied!</span>
         </div>
       </nav>
       <!-- end nav -->
@@ -197,7 +198,6 @@
       <section id="blog" class="blog">im blog</section>
       <section id="about_us" class="about_us">im aboutus</section>
       <section id="contact_us" class="contact_us">im contactus</section>
-
       <!-- sections -->
     </div>
     <!-- End ecommerce app -->

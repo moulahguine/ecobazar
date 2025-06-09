@@ -2,27 +2,24 @@
 
 // start ecommerce app
 .app {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   // start header
   .main_header {
     width: clamp(375px, 100vw, 1920px);
     background-color: $white;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 10px 100px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    padding: $heading-05-400 0;
     // start logo
     .logo {
+      grid-column: 2/4;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: $body-lg-400;
       cursor: pointer;
       // logo img
       img {
-        width: 32px;
+        width: $heading-02-400;
       }
       // logo name
       h3 {
@@ -33,6 +30,7 @@
     // end logo
     // start form
     form {
+      grid-column: 5/8;
       width: clamp(375px, 50vw, 611px);
       border: solid 1px $gray-very-light;
       border-radius: 6px;
@@ -71,6 +69,7 @@
     // end form
     // start cart wrapper
     .cart_wrapper {
+      grid-column: 10/13;
       display: flex;
       align-items: center;
       gap: 15px;
