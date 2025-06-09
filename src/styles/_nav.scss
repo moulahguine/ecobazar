@@ -1,6 +1,7 @@
 @use "variables" as *;
 
 .app {
+  // navBar style
   nav {
     width: clamp(375px, 100vw, 1920px);
     display: grid;
@@ -21,10 +22,12 @@
         }
       }
     }
+    // support number style
     .support_num {
       grid-column: 11/13;
       cursor: copy;
       position: relative;
+      // copy msg style
       .copy_msg {
         position: absolute;
         top: -25px;
@@ -47,6 +50,7 @@
         font-size: $heading-04-400;
       }
     }
+    //.....
     ul,
     .support_num {
       color: white;
