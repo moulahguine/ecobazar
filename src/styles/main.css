@@ -50,7 +50,7 @@ picture {
   justify-content: center;
   grid-template-columns: repeat(12, 1fr);
   grid-template-columns: auto;
-  grid-template-areas: "hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr" "nav nav nav nav nav nav nav nav nav nav nav nav";
+  grid-template-areas: "hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr" "nav nav nav nav nav nav nav nav nav nav nav nav" "hero hero hero hero hero hero hero hero hero hero hero hero";
 }
 
 .app .main_header {
@@ -204,6 +204,42 @@ picture {
   display: flex;
   align-items: center;
   gap: 0;
+}
+
+.app #hero {
+  width: 100%;
+  height: calc(100vh - 157px);
+  background-color: #edf2ee;
+  display: flex;
+  align-items: center;
+}
+.app #hero .hero_container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+}
+.app #hero .hero_container .hero_content {
+  grid-column: 2/6;
+}
+.app #hero .hero_container .hero_content .co_title {
+  font-weight: 100;
+  font-size: 0.875em;
+  color: #00b207;
+}
+.app #hero .hero_container .hero_content .main_title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.1;
+  color: #1b1b1b;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.app #hero .hero_container .hero_images {
+  grid-column: 6/12;
 }
 
 @media (max-width: 1250px) {

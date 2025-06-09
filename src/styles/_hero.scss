@@ -1,0 +1,39 @@
+@use "variables" as *;
+
+.app {
+  #hero {
+    width: 100%;
+    height: calc(100vh - 157px);
+    background-color: $hero;
+    display: flex;
+    align-items: center;
+    .hero_container {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: 1fr;
+      .hero_content {
+        grid-column: 2/6;
+        .co_title {
+          font-weight: 100;
+          font-size: $body-md-400;
+          color: $green-primary;
+        }
+        .main_title {
+          font-family: "Poppins", sans-serif; // or your preferred modern font
+          font-weight: 700; // Bold
+          font-size: clamp(2.5rem, 6vw, 4.5rem); // responsive size
+          line-height: 1.1;
+          color: #1b1b1b; // deep black or dark gray
+          text-align: center;
+          max-width: 800px;
+          margin: 0 auto;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+      }
+      .hero_images {
+        grid-column: 6/12;
+      }
+    }
+  }
+}
