@@ -1,24 +1,22 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 .app {
   // navBar style
   nav {
-    width: clamp(375px, 100vw, 1920px);
+    @include clamp-width(375px, 100vw, 1920px);
     display: grid;
     grid-template-columns: repeat(14, 1fr);
     grid-template-rows: 1fr;
     background-color: $black;
-    padding: 0 5em;
+    padding: 0 5em 0 6em;
     ul {
       grid-column: 1/11;
       li {
         a {
           display: block;
           padding: $body-lg-400;
-          transition: all 0.3s ease-in-out;
-          &:hover {
-            background-color: $green-gray-3;
-          }
+          @include hover-highlight($green-gray-3);
         }
       }
     }
@@ -29,17 +27,7 @@
       position: relative;
       // copy msg style
       .copy_msg {
-        position: absolute;
-        top: -25px;
-        right: 0;
-        background-color: $gray-lighter;
-        color: white;
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-size: 0.8rem;
-        opacity: 0;
-        transition: opacity 0.3s ease-in-out;
-        pointer-events: none;
+        @include tooltip-style($gray-lighter);
       }
 
       &.show_msg .copy_msg {
@@ -54,8 +42,7 @@
     ul,
     .support_num {
       color: white;
-      display: flex;
-      align-items: center;
+      @include flex-center();
     }
   }
 }

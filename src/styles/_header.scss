@@ -18,6 +18,7 @@
       // logo img
       img {
         width: $heading-02-400;
+        animation: plane 2s infinite alternate;
       }
       // logo name
       h3 {
@@ -96,5 +97,15 @@
         }
       }
     }
+  }
+}
+
+@keyframes plane {
+  0% {
+    transform: rotate(5deg);
+    scale: 1.1;
+  }
+  100% {
+    transform: rotate(-5deg);
   }
 }

@@ -70,6 +70,7 @@ picture {
 }
 .app .main_header .logo img {
   width: 2em;
+  animation: plane 2s infinite alternate;
 }
 .app .main_header .logo h3 {
   font-size: 2em;
@@ -144,13 +145,22 @@ picture {
   color: #a1a1a1;
 }
 
+@keyframes plane {
+  0% {
+    transform: rotate(5deg);
+    scale: 1.1;
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
 .app nav {
   width: clamp(375px, 100vw, 1920px);
   display: grid;
   grid-template-columns: repeat(14, 1fr);
   grid-template-rows: 1fr;
   background-color: #333333;
-  padding: 0 5em;
+  padding: 0 5em 0 6em;
 }
 .app nav ul {
   grid-column: 1/11;
@@ -171,7 +181,7 @@ picture {
 .app nav .support_num .copy_msg {
   position: absolute;
   top: -25px;
-  right: 0;
+  right: 150px;
   background-color: #b7b7b7;
   color: white;
   padding: 5px 10px;
@@ -193,6 +203,7 @@ picture {
   color: white;
   display: flex;
   align-items: center;
+  gap: 0;
 }
 
 @media (max-width: 1250px) {

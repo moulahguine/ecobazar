@@ -16,7 +16,29 @@
   }
 }
 
+@mixin hover-highlight($hover-color) {
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
 // for width style
 @mixin clamp-width($min, $preferred, $max) {
   width: clamp($min, $preferred, $max);
+}
+
+@mixin tooltip-style($bg-color, $text-color: white) {
+  position: absolute;
+  top: -25px;
+  right: 150px;
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
 }
