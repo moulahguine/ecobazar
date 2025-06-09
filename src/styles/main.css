@@ -147,13 +147,13 @@ picture {
 .app nav {
   width: clamp(375px, 100vw, 1920px);
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(14, 1fr);
   grid-template-rows: 1fr;
   background-color: #333333;
   padding: 0 3em 0 6em;
 }
 .app nav ul {
-  grid-column: 1/8;
+  grid-column: 1/11;
 }
 .app nav ul li a {
   display: block;
@@ -164,7 +164,7 @@ picture {
   background-color: #a5d5a5;
 }
 .app nav .support_num {
-  grid-column: 11/13;
+  grid-column: 11/15;
   cursor: copy;
   position: relative;
 }
@@ -246,11 +246,22 @@ picture {
   .app .main_header .cart_wrapper .search_btn_sscreen i {
     display: block;
   }
+  .app nav {
+    width: clamp(375px, 100vw, 1080px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .app nav .support_num {
+    display: none;
+  }
 }
 @media (max-width: 787px) {
   .app .main_header {
     display: flex;
     justify-content: space-around;
+    padding: 10px 0;
   }
   .app .main_header .logo {
     gap: 5px;
@@ -260,6 +271,19 @@ picture {
   }
   .app .main_header .cart_wrapper {
     gap: 5px;
+  }
+  .app nav {
+    width: clamp(375px, 100vw, 1080px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .app nav ul li a i {
+    display: block !important;
+  }
+  .app nav ul li a span {
+    display: none;
   }
 }
 @media (max-width: 376px) {

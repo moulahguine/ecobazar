@@ -5,12 +5,12 @@
   nav {
     width: clamp(375px, 100vw, 1920px);
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(14, 1fr);
     grid-template-rows: 1fr;
     background-color: $black;
     padding: 0 3em 0 6em;
     ul {
-      grid-column: 1/8;
+      grid-column: 1/11;
       li {
         a {
           display: block;
@@ -24,7 +24,7 @@
     }
     // support number style
     .support_num {
-      grid-column: 11/13;
+      grid-column: 11/15;
       cursor: copy;
       position: relative;
       // copy msg style

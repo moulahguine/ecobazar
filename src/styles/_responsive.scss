@@ -61,14 +61,28 @@
         }
       }
     }
+    // navBar
+    nav {
+      width: clamp(375px, 100vw, $tablet-screen);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      // support number style
+      .support_num {
+        display: none;
+      }
+    }
   }
 }
 
 @media (max-width: $phone-screen) {
   .app {
+    //header
     .main_header {
       display: flex;
       justify-content: space-around;
+      padding: 10px 0;
       .logo {
         gap: 5px;
         img {
@@ -77,6 +91,26 @@
       }
       .cart_wrapper {
         gap: 5px;
+      }
+    }
+    // navBar
+    nav {
+      width: clamp(375px, 100vw, $tablet-screen);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      ul {
+        li {
+          a {
+            i {
+              display: block !important;
+            }
+            span {
+              display: none;
+            }
+          }
+        }
       }
     }
   }
