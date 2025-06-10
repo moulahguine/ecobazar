@@ -159,7 +159,7 @@ picture {
   display: grid;
   grid-template-columns: repeat(14, 1fr);
   grid-template-rows: 1fr;
-  background-color: #333333;
+  background-color: #1b1b1b;
   padding: 0 5em 0 6em;
 }
 .app nav ul {
@@ -171,7 +171,8 @@ picture {
   transition: all 0.3s ease-in-out;
 }
 .app nav ul li a:hover {
-  background-color: #a5d5a5;
+  color: #1b1b1b;
+  background-color: #edf2ee;
 }
 .app nav .support_num {
   grid-column: 12/15;
@@ -212,6 +213,7 @@ picture {
   background-color: #edf2ee;
   display: flex;
   align-items: center;
+  gap: 0;
 }
 .app #hero .hero_container {
   display: grid;
@@ -222,11 +224,18 @@ picture {
   grid-column: 2/6;
 }
 .app #hero .hero_container .hero_content .co_title {
-  font-weight: 100;
-  font-size: 1em;
   font-weight: 500;
+  font-size: 1em;
   color: #00b207;
   text-transform: uppercase;
+}
+.app #hero .hero_container .hero_content .co_title::-moz-selection {
+  background-color: #00b207;
+  color: #ffffff;
+}
+.app #hero .hero_container .hero_content .co_title::selection {
+  background-color: #00b207;
+  color: #ffffff;
 }
 .app #hero .hero_container .hero_content .main_title {
   font-family: sans-serif;
@@ -234,7 +243,68 @@ picture {
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   color: #1b1b1b;
   line-height: 1.1;
-  margin-top: 15px;
+  margin-top: 35px;
+}
+.app #hero .hero_container .hero_content .main_title::-moz-selection {
+  background-color: #00b207;
+  color: #ffffff;
+}
+.app #hero .hero_container .hero_content .main_title::selection {
+  background-color: #00b207;
+  color: #ffffff;
+}
+.app #hero .hero_container .hero_content .hero_discount {
+  font-size: 2em;
+  margin-top: 20px;
+}
+.app #hero .hero_container .hero_content .hero_discount span {
+  font-family: sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #f98300;
+}
+.app #hero .hero_container .hero_content .hero_discount span::-moz-selection {
+  background-color: #f98300;
+  color: #ffffff;
+}
+.app #hero .hero_container .hero_content .hero_discount span::selection {
+  background-color: #f98300;
+  color: #ffffff;
+}
+.app #hero .hero_container .hero_content .hero_discount::-moz-selection {
+  background-color: #00b207;
+  color: #ffffff;
+}
+.app #hero .hero_container .hero_content .hero_discount::selection {
+  background-color: #00b207;
+  color: #ffffff;
+}
+.app #hero .hero_container .hero_content .hero_para {
+  color: #a1a1a1;
+}
+.app #hero .hero_container .hero_content .hero_para::-moz-selection {
+  background-color: #00b207;
+  color: #ffffff;
+}
+.app #hero .hero_container .hero_content .hero_para::selection {
+  background-color: #00b207;
+  color: #ffffff;
+}
+.app #hero .hero_container .hero_content .btn_hero_show {
+  background-color: #00b207;
+  color: #ffffff;
+  font-size: 1em;
+  padding: 1em 2.5em;
+  border-radius: 53px;
+  margin-top: 2em;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+.app #hero .hero_container .hero_content .btn_hero_show:hover {
+  background-color: #375c37;
+}
+.app #hero .hero_container .hero_content .btn_hero_show:hover i {
+  transform: translateX(5px);
 }
 .app #hero .hero_container .hero_images {
   grid-column: 6/12;

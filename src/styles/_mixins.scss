@@ -16,11 +16,12 @@
   }
 }
 
-@mixin hover-highlight($hover-color) {
+@mixin hover-highlight($hover-bg, $color) {
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    background-color: $hover-color;
+    color: $color;
+    background-color: $hover-bg;
   }
 }
 
@@ -41,4 +42,15 @@
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   pointer-events: none;
+}
+
+@mixin clamp-font($min, $vw, $max) {
+  font-size: clamp($min, $vw, $max);
+}
+
+@mixin selection($bg, $color) {
+  &::selection {
+    background-color: $bg;
+    color: $color;
+  }
 }

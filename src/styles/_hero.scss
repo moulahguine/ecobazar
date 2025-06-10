@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 .app {
   // hero section
@@ -6,8 +7,7 @@
     width: 100%;
     height: calc(100vh - 157px);
     background-color: $hero;
-    display: flex;
-    align-items: center;
+    @include flex-center;
     // container
     .hero_container {
       display: grid;
@@ -18,20 +18,53 @@
         grid-column: 2/6;
         // small title
         .co_title {
-          font-weight: 100;
-          font-size: $body-lg-400;
           font-weight: 500;
+          font-size: $body-lg-400;
           color: $green-primary;
           text-transform: uppercase;
+          @include selection($green-primary, $white);
         }
         // big title
         .main_title {
-          font-family: sans-serif; // or your preferred modern font
-          font-weight: 700; // Bold
-          font-size: clamp(2.5rem, 6vw, 4.5rem);
-          color: #1b1b1b;
+          font-family: sans-serif;
+          font-weight: $font-bold;
+          @include clamp-font(2.5rem, 6vw, 4.5rem);
+          color: $black;
           line-height: 1.1;
-          margin-top: 15px;
+          margin-top: 35px;
+          @include selection($green-primary, $white);
+        }
+        .hero_discount {
+          font-size: $heading-02-400;
+          margin-top: 20px;
+          span {
+            font-family: sans-serif;
+            font-weight: $font-bold;
+            text-transform: uppercase;
+            color: $orange-warning;
+            @include selection($orange-warning, $white);
+          }
+          @include selection($green-primary, $white);
+        }
+        .hero_para {
+          color: $gray-light;
+          @include selection($green-primary, $white);
+        }
+        .btn_hero_show {
+          background-color: $green-primary;
+          color: $white;
+          font-size: $body-lg-400;
+          padding: $body-lg-400 $heading-01-400;
+          border-radius: 53px;
+          margin-top: $heading-02-400;
+          transition: background-color 0.3s ease;
+          cursor: pointer;
+          &:hover {
+            background-color: $green-gray-7;
+            i {
+              transform: translateX(5px);
+            }
+          }
         }
       }
       .hero_images {
