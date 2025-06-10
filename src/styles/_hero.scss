@@ -1,34 +1,37 @@
 @use "variables" as *;
 
 .app {
+  // hero section
   #hero {
     width: 100%;
     height: calc(100vh - 157px);
     background-color: $hero;
     display: flex;
     align-items: center;
+    // container
     .hero_container {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       grid-template-rows: 1fr;
+      // content info
       .hero_content {
         grid-column: 2/6;
+        // small title
         .co_title {
           font-weight: 100;
-          font-size: $body-md-400;
+          font-size: $body-lg-400;
+          font-weight: 500;
           color: $green-primary;
+          text-transform: uppercase;
         }
+        // big title
         .main_title {
-          font-family: "Poppins", sans-serif; // or your preferred modern font
+          font-family: sans-serif; // or your preferred modern font
           font-weight: 700; // Bold
-          font-size: clamp(2.5rem, 6vw, 4.5rem); // responsive size
+          font-size: clamp(2.5rem, 6vw, 4.5rem);
+          color: #1b1b1b;
           line-height: 1.1;
-          color: #1b1b1b; // deep black or dark gray
-          text-align: center;
-          max-width: 800px;
-          margin: 0 auto;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
+          margin-top: 15px;
         }
       }
       .hero_images {

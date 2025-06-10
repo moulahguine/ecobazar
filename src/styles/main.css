@@ -223,20 +223,18 @@ picture {
 }
 .app #hero .hero_container .hero_content .co_title {
   font-weight: 100;
-  font-size: 0.875em;
+  font-size: 1em;
+  font-weight: 500;
   color: #00b207;
+  text-transform: uppercase;
 }
 .app #hero .hero_container .hero_content .main_title {
-  font-family: "Poppins", sans-serif;
+  font-family: sans-serif;
   font-weight: 700;
   font-size: clamp(2.5rem, 6vw, 4.5rem);
-  line-height: 1.1;
   color: #1b1b1b;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.1;
+  margin-top: 15px;
 }
 .app #hero .hero_container .hero_images {
   grid-column: 6/12;
@@ -314,10 +312,23 @@ picture {
     gap: 5px;
   }
   .app .main_header .logo img {
-    width: 1.75em;
+    width: 1.5em;
+  }
+  .app .main_header .logo h3 {
+    font-size: 1.5em;
   }
   .app .main_header .cart_wrapper {
     gap: 5px;
+  }
+  .app .main_header .cart_wrapper .search_btn_sscreen {
+    font-size: 0.875em;
+  }
+  .app .main_header .cart_wrapper .fav_products_box img,
+  .app .main_header .cart_wrapper .cart img {
+    width: 1.75em;
+  }
+  .app .main_header .cart_wrapper .cart .cost_products {
+    font-size: 0.875em;
   }
   .app nav {
     width: clamp(375px, 100vw, 1080px);
