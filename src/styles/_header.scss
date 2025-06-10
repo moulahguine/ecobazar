@@ -57,6 +57,9 @@
         font-weight: $font-weight-semibold;
         @include btn-hover($green-primary, $green-gray-6);
       }
+      &:focus-within {
+        box-shadow: 0 0 40px 1px $green-primary;
+      }
     }
     // cart wrapper
     .cart_wrapper {

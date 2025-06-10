@@ -1,11 +1,11 @@
-// flex and gap
+// Flex utility with optional gap
 @mixin flex-center($gap: 0) {
   display: flex;
   align-items: center;
   gap: $gap;
 }
 
-//btn and hover
+// Button background color with hover transition
 @mixin btn-hover($bg-color, $hover-color) {
   background-color: $bg-color;
   transition: background-color 0.3s ease-in-out;
@@ -16,6 +16,7 @@
   }
 }
 
+// Reusable hover style for background and text color
 @mixin hover-highlight($hover-bg, $color) {
   transition: all 0.3s ease-in-out;
 
@@ -25,11 +26,12 @@
   }
 }
 
-// for width style
+// Clamp-based responsive width utility
 @mixin clamp-width($min, $preferred, $max) {
   width: clamp($min, $preferred, $max);
 }
 
+// Tooltip style with customizable colors
 @mixin tooltip-style($bg-color, $text-color: white) {
   position: absolute;
   top: -25px;
@@ -44,10 +46,12 @@
   pointer-events: none;
 }
 
+// Clamp-based responsive font size
 @mixin clamp-font($min, $vw, $max) {
   font-size: clamp($min, $vw, $max);
 }
 
+// Text selection color override
 @mixin selection($bg, $color) {
   &::selection {
     background-color: $bg;

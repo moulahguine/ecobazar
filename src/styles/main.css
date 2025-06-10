@@ -109,6 +109,9 @@ picture {
 .app .main_header form .btn_search:hover {
   background-color: #4e7d4e;
 }
+.app .main_header form:focus-within {
+  box-shadow: 0 0 40px 1px #00b207;
+}
 .app .main_header .cart_wrapper {
   grid-column: 11/13;
   display: flex;
@@ -209,11 +212,12 @@ picture {
 
 .app #hero {
   width: 100%;
-  height: calc(100vh - 157px);
+  height: 800px;
   background-color: #edf2ee;
   display: flex;
   align-items: center;
   gap: 0;
+  justify-content: center;
 }
 .app #hero .hero_container {
   display: grid;
@@ -307,7 +311,19 @@ picture {
   transform: translateX(5px);
 }
 .app #hero .hero_container .hero_images {
+  display: flex;
   grid-column: 6/12;
+  aspect-ratio: 16/9;
+  position: relative;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+.app #hero .hero_container .hero_images img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (max-width: 1250px) {

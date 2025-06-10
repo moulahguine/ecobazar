@@ -5,9 +5,10 @@
   // hero section
   #hero {
     width: 100%;
-    height: calc(100vh - 157px);
+    height: 800px;
     background-color: $hero;
     @include flex-center;
+    justify-content: center;
     // container
     .hero_container {
       display: grid;
@@ -68,7 +69,18 @@
         }
       }
       .hero_images {
+        display: flex;
         grid-column: 6/12;
+        aspect-ratio: 16/9;
+        position: relative;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        img {
+          flex: 1 0 100%;
+          scroll-snap-align: start;
+          object-fit: cover;
+        }
       }
     }
   }
