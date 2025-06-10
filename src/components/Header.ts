@@ -52,20 +52,8 @@ const updateSearch = () => {
   }
 };
 
-// for logo name update
-const updateLogoName = () => {
-  if (!logoName) return;
-  if (isPhoneScreen()) {
-    logoName.textContent = "bazar";
-  } else {
-    logoName.textContent = originalText;
-  }
-};
-
 updateSearch();
-updateLogoName();
 
 window.addEventListener("resize", () => {
   updateSearch();
-  updateLogoName();
 });

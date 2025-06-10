@@ -86,11 +86,28 @@
       .logo {
         gap: 5px;
         img {
-          width: $heading-03-400;
+          width: $heading-04-400;
+        }
+        h3 {
+          font-size: $heading-04-400;
         }
       }
       .cart_wrapper {
         gap: 5px;
+        .search_btn_sscreen {
+          font-size: $body-md-400;
+        }
+        .fav_products_box,
+        .cart {
+          img {
+            width: $heading-03-400;
+          }
+        }
+        .cart {
+          .cost_products {
+            font-size: $body-md-400;
+          }
+        }
       }
     }
     // navBar
