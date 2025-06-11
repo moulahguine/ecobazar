@@ -11,6 +11,7 @@
     justify-content: center;
     // container
     .hero_container {
+      @include clamp-width(375px, 100vw, 1920px);
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       grid-template-rows: 1fr;
@@ -69,14 +70,14 @@
         }
       }
       .hero_images {
-        display: flex;
         grid-column: 6/12;
+        display: flex;
         aspect-ratio: 16/9;
-        overflow-x: auto;
+        overflow: auto;
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
         scrollbar-width: none;
-        scr img {
+        img {
           flex: 1 0 100%;
           scroll-snap-align: start;
         }

@@ -111,7 +111,7 @@ picture {
   background-color: #4e7d4e;
 }
 .app .main_header form:focus-within {
-  box-shadow: 0 0 40px 1px #00b207;
+  box-shadow: 0 0 5px 1px #00b207;
 }
 .app .main_header .cart_wrapper {
   grid-column: 11/13;
@@ -221,6 +221,7 @@ picture {
   justify-content: center;
 }
 .app #hero .hero_container {
+  width: clamp(375px, 100vw, 1920px);
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr;
@@ -312,15 +313,15 @@ picture {
   transform: translateX(5px);
 }
 .app #hero .hero_container .hero_images {
-  display: flex;
   grid-column: 6/12;
+  display: flex;
   aspect-ratio: 16/9;
-  overflow-x: auto;
+  overflow: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scrollbar-width: none;
 }
-.app #hero .hero_container .hero_images scr img {
+.app #hero .hero_container .hero_images img {
   flex: 1 0 100%;
   scroll-snap-align: start;
 }
