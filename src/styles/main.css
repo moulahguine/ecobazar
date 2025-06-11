@@ -86,6 +86,7 @@ picture {
   align-items: center;
   overflow: hidden;
   background-color: #ffffff;
+  transition: box-shadow 0.3s ease-in-out;
 }
 .app .main_header form i {
   color: #a1a1a1;
@@ -314,16 +315,14 @@ picture {
   display: flex;
   grid-column: 6/12;
   aspect-ratio: 16/9;
-  position: relative;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+  scrollbar-width: none;
 }
-.app #hero .hero_container .hero_images img {
+.app #hero .hero_container .hero_images scr img {
   flex: 1 0 100%;
   scroll-snap-align: start;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 @media (max-width: 1250px) {

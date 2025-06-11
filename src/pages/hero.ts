@@ -16,5 +16,5 @@ if (heroImages) {
       left: scrollPosition,
       behavior: "smooth",
     });
-  }, 2000);
+  }, 5000);
 }

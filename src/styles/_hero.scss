@@ -72,14 +72,13 @@
         display: flex;
         grid-column: 6/12;
         aspect-ratio: 16/9;
-        position: relative;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
-        img {
+        scrollbar-width: none;
+        scr img {
           flex: 1 0 100%;
           scroll-snap-align: start;
-          object-fit: cover;
         }
       }
     }
