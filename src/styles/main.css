@@ -320,6 +320,8 @@ picture {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scrollbar-width: none;
+  touch-action: none;
+  pointer-events: none;
 }
 .app #hero .hero_container .hero_images img {
   flex: 1 0 100%;

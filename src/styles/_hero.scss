@@ -77,6 +77,8 @@
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
         scrollbar-width: none;
+        touch-action: none;
+        pointer-events: none;
         img {
           flex: 1 0 100%;
           scroll-snap-align: start;
