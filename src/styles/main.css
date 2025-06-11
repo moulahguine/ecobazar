@@ -302,9 +302,9 @@ picture {
   font-size: 1em;
   padding: 1em 2.5em;
   border-radius: 53px;
-  margin-top: 2em;
   transition: background-color 0.3s ease;
   cursor: pointer;
+  margin-top: 2em;
 }
 .app #hero .hero_container .hero_content .btn_hero_show:hover {
   background-color: #375c37;

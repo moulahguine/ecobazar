@@ -53,14 +53,14 @@
           @include selection($green-primary, $white);
         }
         .btn_hero_show {
-          background-color: $green-primary;
-          color: $white;
-          font-size: $body-lg-400;
-          padding: $body-lg-400 $heading-01-400;
-          border-radius: 53px;
+          @include button-style(
+            $green-primary,
+            $white,
+            $body-lg-400,
+            $heading-01-400,
+            53px
+          );
           margin-top: $heading-02-400;
-          transition: background-color 0.3s ease;
-          cursor: pointer;
           &:hover {
             background-color: $green-gray-7;
             i {

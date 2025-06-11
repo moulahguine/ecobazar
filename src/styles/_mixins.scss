@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 // Flex utility with optional gap
 @mixin flex-center($gap: 0) {
   display: flex;
@@ -57,4 +59,14 @@
     background-color: $bg;
     color: $color;
   }
+}
+
+@mixin button-style($bg, $color, $padding-y, $padding-x, $radius) {
+  background-color: $bg;
+  color: $color;
+  font-size: $body-lg-400;
+  padding: $padding-y $padding-x;
+  border-radius: $radius;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
 }
