@@ -19,46 +19,41 @@
         gap: $body-lg-400;
       }
     }
-    // // hero section
-    // #hero {
-    //   // container
-    //   .hero_container {
-    //     // content info
-    //     .hero_content {
-    //       grid-column: 2/6;
-    //       // small title
-    //       .co_title {
-    //         font-size: $body-md-400;
-    //       }
-    //       // big title
-    //       .main_title {
-    //         @include clamp-font(2rem, 6vw, 4rem);
-    //         line-height: 1;
-    //         margin-top: 25px;
-    //       }
-    //       .hero_discount {
-    //         font-size: $heading-04-400;
-    //         margin-top: 10px;
-    //       }
-    //       .hero_para {
-    //         font-size: $body-md-400;
-    //       }
-    //       .btn_hero_show {
-    //         @include button-style(
-    //           $green-primary,
-    //           $white,
-    //           $body-md-400,
-    //           $heading-02-400,
-    //           35px
-    //         );
-    //         margin-top: $heading-03-400;
-    //       }
-    //     }
-    //     .hero_images {
-    //       aspect-ratio: 12/8;
-    //     }
-    //   }
-    // }
+    // hero section
+    #hero {
+      overflow: hidden;
+      align-items: start;
+      height: calc(100vh - 150px);
+      .hero_container {
+        display: block;
+        position: relative;
+        .hero_content {
+          width: 100%;
+          height: calc(100vh - 150px);
+          backdrop-filter: blur(5px);
+          position: absolute;
+          top: 50%;
+          left: 55px;
+          transform: translateY(25%);
+          z-index: 10;
+        }
+        .hero_images {
+          width: 100%;
+          position: absolute;
+          right: -200px;
+          top: 200px;
+          z-index: 9;
+          img {
+            display: none;
+          }
+          .hero_second_img {
+            object-fit: contain;
+            display: block;
+            width: 150px !important;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -118,30 +113,6 @@
     }
     // hero section
     #hero {
-      height: calc(100vh - 100px);
-      align-items: start;
-      .hero_container {
-        display: block;
-        position: relative;
-        .hero_content {
-          position: absolute;
-          top: 150px;
-          z-index: 10;
-        }
-        .hero_images {
-          //          right: -300px;
-          position: absolute;
-          z-index: 9;
-          img {
-            width: 150%;
-            object-fit: contain;
-            display: none;
-          }
-          .hero_second_img {
-            display: block;
-          }
-        }
-      }
     }
   }
 }
