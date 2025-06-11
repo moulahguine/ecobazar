@@ -19,46 +19,46 @@
         gap: $body-lg-400;
       }
     }
-    // hero section
-    #hero {
-      // container
-      .hero_container {
-        // content info
-        .hero_content {
-          grid-column: 2/6;
-          // small title
-          .co_title {
-            font-size: $body-md-400;
-          }
-          // big title
-          .main_title {
-            @include clamp-font(2rem, 6vw, 4rem);
-            line-height: 1;
-            margin-top: 25px;
-          }
-          .hero_discount {
-            font-size: $heading-04-400;
-            margin-top: 10px;
-          }
-          .hero_para {
-            font-size: $body-md-400;
-          }
-          .btn_hero_show {
-            @include button-style(
-              $green-primary,
-              $white,
-              $body-md-400,
-              $heading-02-400,
-              35px
-            );
-            margin-top: $heading-03-400;
-          }
-        }
-        .hero_images {
-          aspect-ratio: 12/8;
-        }
-      }
-    }
+    // // hero section
+    // #hero {
+    //   // container
+    //   .hero_container {
+    //     // content info
+    //     .hero_content {
+    //       grid-column: 2/6;
+    //       // small title
+    //       .co_title {
+    //         font-size: $body-md-400;
+    //       }
+    //       // big title
+    //       .main_title {
+    //         @include clamp-font(2rem, 6vw, 4rem);
+    //         line-height: 1;
+    //         margin-top: 25px;
+    //       }
+    //       .hero_discount {
+    //         font-size: $heading-04-400;
+    //         margin-top: 10px;
+    //       }
+    //       .hero_para {
+    //         font-size: $body-md-400;
+    //       }
+    //       .btn_hero_show {
+    //         @include button-style(
+    //           $green-primary,
+    //           $white,
+    //           $body-md-400,
+    //           $heading-02-400,
+    //           35px
+    //         );
+    //         margin-top: $heading-03-400;
+    //       }
+    //     }
+    //     .hero_images {
+    //       aspect-ratio: 12/8;
+    //     }
+    //   }
+    // }
   }
 }
 
@@ -119,16 +119,26 @@
     // hero section
     #hero {
       height: calc(100vh - 100px);
+      align-items: start;
       .hero_container {
-        align-items: flex-start;
+        display: block;
+        position: relative;
         .hero_content {
-          grid-column: 2/12;
+          position: absolute;
+          top: 150px;
+          z-index: 10;
         }
         .hero_images {
-          grid-column: 2/12;
-          aspect-ratio: 4/3;
+          //          right: -300px;
+          position: absolute;
+          z-index: 9;
           img {
-            flex: 1 0 350px;
+            width: 150%;
+            object-fit: contain;
+            display: none;
+          }
+          .hero_second_img {
+            display: block;
           }
         }
       }
