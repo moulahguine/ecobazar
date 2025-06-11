@@ -1,5 +1,7 @@
 @use "variables" as *;
+@use "mixins" as *;
 
+// small-desktop === 1250 // 12
 @media (max-width: $small-desktop) {
   .app {
     //  header
@@ -17,9 +19,50 @@
         gap: $body-lg-400;
       }
     }
+    // hero section
+    #hero {
+      // container
+      .hero_container {
+        // content info
+        .hero_content {
+          grid-column: 2/6;
+          // small title
+          .co_title {
+            font-size: $body-md-400;
+          }
+          // big title
+          .main_title {
+            @include clamp-font(2rem, 6vw, 4rem);
+            line-height: 1;
+            margin-top: 25px;
+          }
+          .hero_discount {
+            font-size: $heading-04-400;
+            margin-top: 10px;
+          }
+          .hero_para {
+            font-size: $body-md-400;
+          }
+          .btn_hero_show {
+            @include button-style(
+              $green-primary,
+              $white,
+              $body-md-400,
+              $heading-02-400,
+              35px
+            );
+            margin-top: $heading-03-400;
+          }
+        }
+        .hero_images {
+          aspect-ratio: 12/8;
+        }
+      }
+    }
   }
 }
 
+// tablet-screen === 1080 // 8
 @media (max-width: $tablet-screen) {
   .app {
     position: relative;
@@ -73,9 +116,27 @@
         display: none;
       }
     }
+    // hero section
+    #hero {
+      height: calc(100vh - 100px);
+      .hero_container {
+        align-items: flex-start;
+        .hero_content {
+          grid-column: 2/12;
+        }
+        .hero_images {
+          grid-column: 2/12;
+          aspect-ratio: 4/3;
+          img {
+            flex: 1 0 350px;
+          }
+        }
+      }
+    }
   }
 }
 
+// phone-screen === 787 //6
 @media (max-width: $phone-screen) {
   .app {
     //header
@@ -133,6 +194,7 @@
   }
 }
 
+// $small-screen: 376px; //4
 @media (max-width: $small-screen) {
   .app {
     .main_header {

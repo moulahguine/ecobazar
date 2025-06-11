@@ -327,6 +327,9 @@ picture {
   flex: 1 0 100%;
   scroll-snap-align: start;
 }
+.app #hero .hero_container .hero_images .hero_second_img {
+  display: none;
+}
 
 @media (max-width: 1250px) {
   .app .main_header {
@@ -340,6 +343,37 @@ picture {
   .app .main_header .cart_wrapper {
     grid-column: 9/12;
     gap: 1em;
+  }
+  .app #hero .hero_container .hero_content {
+    grid-column: 2/6;
+  }
+  .app #hero .hero_container .hero_content .co_title {
+    font-size: 0.875em;
+  }
+  .app #hero .hero_container .hero_content .main_title {
+    font-size: clamp(2rem, 6vw, 4rem);
+    line-height: 1;
+    margin-top: 25px;
+  }
+  .app #hero .hero_container .hero_content .hero_discount {
+    font-size: 1.5em;
+    margin-top: 10px;
+  }
+  .app #hero .hero_container .hero_content .hero_para {
+    font-size: 0.875em;
+  }
+  .app #hero .hero_container .hero_content .btn_hero_show {
+    background-color: #00b207;
+    color: #ffffff;
+    font-size: 1em;
+    padding: 0.875em 2em;
+    border-radius: 35px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-top: 1.75em;
+  }
+  .app #hero .hero_container .hero_images {
+    aspect-ratio: 12/8;
   }
 }
 @media (max-width: 1080px) {
@@ -388,6 +422,22 @@ picture {
   }
   .app nav .support_num {
     display: none;
+  }
+  .app #hero {
+    height: calc(100vh - 100px);
+  }
+  .app #hero .hero_container {
+    align-items: flex-start;
+  }
+  .app #hero .hero_container .hero_content {
+    grid-column: 2/12;
+  }
+  .app #hero .hero_container .hero_images {
+    grid-column: 2/12;
+    aspect-ratio: 4/3;
+  }
+  .app #hero .hero_container .hero_images img {
+    flex: 1 0 350px;
   }
 }
 @media (max-width: 787px) {
