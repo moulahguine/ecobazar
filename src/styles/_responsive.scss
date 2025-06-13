@@ -62,6 +62,7 @@
   .app {
     position: relative;
     // layout behind search
+
     &::before {
       content: "";
       background-color: #00000091;
