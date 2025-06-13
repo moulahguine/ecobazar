@@ -31,23 +31,24 @@ $font-weight-semibold: 600;
 $font-bold: 700;
 
 // Display
-$display-01-400: 3.5em; // 56px
+$display-01-400: 3.5rem; // 56px
 
 // Headings
-$heading-01-400: 2.5em; // 40px
-$heading-02-400: 2em; // 32px
-$heading-03-400: 1.75em; // 28px
-$heading-04-400: 1.5em; // 24px
-$heading-05-400: 1.25em; // 20px
+$heading-01-400: 2.5rem; // 40px
+$heading-02-400: 2rem; // 32px
+$heading-03-400: 1.75rem; // 28px
+$heading-04-400: 1.5rem; // 24px
+$heading-05-400: 1.25rem; // 20px
+
 // Body Text
-$body-xl-400: 1.125em; // 18px
-$body-lg-400: 1em; // 16px
-$body-md-400: 0.875em; // 14px
-$body-sm-400: 0.75em; // 12px
+$body-xl-400: 1.125rem; // 18px
+$body-lg-400: 1rem; // 16px
+$body-md-400: 0.875rem; // 14px
+$body-sm-400: 0.75rem; // 12px
 
 // Breakpoints
-$small-desktop: 1250px; // 12
-$tablet-screen: 1080px; // 8
-$phone-screen: 787px; //6
-$small-screen: 376px; //4
-$custom-large: 1300px;
+$small-desktop: 78.125rem; // 1250px
+$tablet-screen: 67.5rem; // 1080px
+$phone-screen: 49.1875rem; // 787px
+$small-screen: 23.5rem; // 376px
+$custom-large: 81.25rem; // 1300px

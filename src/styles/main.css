@@ -59,21 +59,21 @@ picture {
   display: grid;
   grid-template-columns: repeat(14, 1fr);
   grid-template-rows: 1fr;
-  padding: 1.25em 0;
+  padding: 1.25rem 0;
 }
 .app .main_header .logo {
   grid-column: 2/4;
   display: flex;
   align-items: center;
-  gap: 1em;
+  gap: 1rem;
   cursor: pointer;
 }
 .app .main_header .logo img {
-  width: 2em;
+  width: 2rem;
   animation: plane 2s infinite alternate;
 }
 .app .main_header .logo h3 {
-  font-size: 2em;
+  font-size: 2rem;
   color: #0a1f0a;
 }
 .app .main_header form {
@@ -121,7 +121,7 @@ picture {
 }
 .app .main_header .cart_wrapper .search_btn_sscreen i {
   display: none;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   color: #00b207;
   transition: color 0.3s ease-in-out;
   cursor: pointer;
@@ -144,7 +144,7 @@ picture {
   cursor: pointer;
 }
 .app .main_header .cart_wrapper .cart .cost_products h3 {
-  font-size: 0.75em;
+  font-size: 0.75rem;
   font-weight: 500;
   color: #a1a1a1;
 }
@@ -171,7 +171,7 @@ picture {
 }
 .app nav ul li a {
   display: block;
-  padding: 1em;
+  padding: 1rem;
   transition: all 0.3s ease-in-out;
 }
 .app nav ul li a:hover {
@@ -201,7 +201,7 @@ picture {
 }
 .app nav .support_num i {
   margin-right: 10px;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 .app nav ul,
 .app nav .support_num {
@@ -231,7 +231,7 @@ picture {
 }
 .app #hero .hero_container .hero_content .co_title {
   font-weight: 500;
-  font-size: 1em;
+  font-size: 1rem;
   color: #00b207;
   text-transform: uppercase;
 }
@@ -260,7 +260,7 @@ picture {
   color: #ffffff;
 }
 .app #hero .hero_container .hero_content .hero_discount {
-  font-size: 2em;
+  font-size: 2rem;
   margin-top: 20px;
 }
 .app #hero .hero_container .hero_content .hero_discount span {
@@ -299,12 +299,12 @@ picture {
 .app #hero .hero_container .hero_content .btn_hero_show {
   background-color: #00b207;
   color: #ffffff;
-  font-size: 1em;
-  padding: 1em 2.5em;
+  font-size: 1rem;
+  padding: 1rem 2.5rem;
   border-radius: 53px;
   transition: background-color 0.3s ease;
   cursor: pointer;
-  margin-top: 2em;
+  margin-top: 2rem;
 }
 .app #hero .hero_container .hero_content .btn_hero_show:hover {
   background-color: #375c37;
@@ -331,18 +331,18 @@ picture {
   display: none;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 78.125rem) {
   .app .main_header {
-    width: clamp(376px, 100vw, 1250px);
+    width: clamp(23.5rem, 100vw, 78.125rem);
     grid-template-columns: repeat(12, 1fr);
   }
   .app .main_header form {
     grid-column: 6/9;
-    width: clamp(375px, 50vw, 1080px);
+    width: clamp(375px, 50vw, 67.5rem);
   }
   .app .main_header .cart_wrapper {
     grid-column: 9/12;
-    gap: 1em;
+    gap: 1rem;
   }
   .app #hero {
     overflow: hidden;
@@ -366,22 +366,24 @@ picture {
   }
   .app #hero .hero_container .hero_images {
     width: 100%;
-    position: absolute;
-    right: -200px;
-    top: 200px;
+    position: fixed;
+    right: -400px;
+    top: 50%;
+    transform: translateY(-35%);
     z-index: 9;
   }
   .app #hero .hero_container .hero_images img {
     display: none;
   }
   .app #hero .hero_container .hero_images .hero_second_img {
+    flex: 0 1 auto;
     -o-object-fit: contain;
        object-fit: contain;
     display: block;
-    width: 150px !important;
+    width: 100%;
   }
 }
-@media (max-width: 1080px) {
+@media (max-width: 67.5rem) {
   .app {
     position: relative;
   }
@@ -419,7 +421,7 @@ picture {
     display: block;
   }
   .app nav {
-    width: clamp(375px, 100vw, 1080px);
+    width: clamp(375px, 100vw, 67.5rem);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -429,7 +431,7 @@ picture {
     display: none;
   }
 }
-@media (max-width: 787px) {
+@media (max-width: 49.1875rem) {
   .app .main_header {
     display: flex;
     justify-content: space-around;
@@ -439,26 +441,26 @@ picture {
     gap: 5px;
   }
   .app .main_header .logo img {
-    width: 1.5em;
+    width: 1.5rem;
   }
   .app .main_header .logo h3 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
   .app .main_header .cart_wrapper {
     gap: 5px;
   }
   .app .main_header .cart_wrapper .search_btn_sscreen {
-    font-size: 0.875em;
+    font-size: 0.875rem;
   }
   .app .main_header .cart_wrapper .fav_products_box img,
   .app .main_header .cart_wrapper .cart img {
-    width: 1.75em;
+    width: 1.75rem;
   }
   .app .main_header .cart_wrapper .cart .cost_products {
-    font-size: 0.875em;
+    font-size: 0.875rem;
   }
   .app nav {
-    width: clamp(375px, 100vw, 1080px);
+    width: clamp(375px, 100vw, 67.5rem);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -471,7 +473,7 @@ picture {
     display: none;
   }
 }
-@media (max-width: 376px) {
+@media (max-width: 23.5rem) {
   .app .main_header {
     display: flex;
     flex-direction: column;

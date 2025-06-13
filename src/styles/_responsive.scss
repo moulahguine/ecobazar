@@ -39,17 +39,19 @@
         }
         .hero_images {
           width: 100%;
-          position: absolute;
-          right: -200px;
-          top: 200px;
+          position: fixed;
+          right: -400px;
+          top: 50%;
+          transform: translateY(-35%);
           z-index: 9;
           img {
             display: none;
           }
           .hero_second_img {
+            flex: 0 1 auto;
             object-fit: contain;
             display: block;
-            width: 150px !important;
+            width: 100%;
           }
         }
       }
