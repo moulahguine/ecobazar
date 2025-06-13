@@ -6,6 +6,8 @@
   .app {
     //  header
     .main_header {
+      position: relative;
+      z-index: 555;
       width: clamp($small-screen, 100vw, $small-desktop);
       grid-template-columns: repeat(12, 1fr);
       // form
@@ -19,36 +21,59 @@
         gap: $body-lg-400;
       }
     }
+    nav {
+      position: relative;
+      z-index: 555;
+    }
     // hero section
     #hero {
       overflow: hidden;
-      align-items: start;
-      height: calc(100vh - 150px);
+      align-items: flex-start;
+      height: calc(100vh - 140px);
+
       .hero_container {
         display: block;
         position: relative;
-        .hero_content {
-          width: 100%;
-          height: calc(100vh - 150px);
-          backdrop-filter: blur(5px);
+        height: inherit;
+
+        &::after {
+          content: "";
           position: absolute;
-          top: 50%;
-          left: 55px;
-          transform: translateY(25%);
-          z-index: 10;
+          top: 0;
+          left: 0;
+          z-index: 9;
+          width: 100%;
+          height: 100%;
+          backdrop-filter: blur(5px);
         }
+
+        .hero_content {
+          padding: 0 3.125rem; // 50px
+          width: 100%;
+          height: inherit;
+          position: absolute;
+          z-index: 10;
+          top: 50%;
+          transform: translateY(-40%);
+          left: 0;
+        }
+
         .hero_images {
           width: 100%;
+          height: inherit;
           position: fixed;
-          right: -400px;
-          top: 50%;
-          transform: translateY(-35%);
+          left: 50%;
+          top: 0;
+          transform: translate(-50%, -60%);
           z-index: 9;
+
           img {
             display: none;
           }
+
           .hero_second_img {
-            flex: 0 1 auto;
+            flex: 0 0 auto;
+            aspect-ratio: 16 / 9;
             object-fit: contain;
             display: block;
             width: 100%;
@@ -114,9 +139,6 @@
         display: none;
       }
     }
-    // hero section
-    #hero {
-    }
   }
 }
 
@@ -175,6 +197,19 @@
         }
       }
     }
+    #hero {
+      .hero_container {
+        .hero_images {
+          left: 50%;
+          top: 50%;
+          transform: translate(-40%, -100%);
+
+          .hero_second_img {
+            width: 80%;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -185,6 +220,19 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+    #hero {
+      .hero_container {
+        .hero_images {
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -95%) rotate(5deg);
+
+          .hero_second_img {
+            width: 100%;
+          }
+        }
+      }
     }
   }
 }

@@ -231,7 +231,7 @@ picture {
 }
 .app #hero .hero_container .hero_content .co_title {
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: #00b207;
   text-transform: uppercase;
 }
@@ -260,7 +260,7 @@ picture {
   color: #ffffff;
 }
 .app #hero .hero_container .hero_content .hero_discount {
-  font-size: 2rem;
+  font-size: 1.75rem;
   margin-top: 20px;
 }
 .app #hero .hero_container .hero_content .hero_discount span {
@@ -286,6 +286,7 @@ picture {
   color: #ffffff;
 }
 .app #hero .hero_container .hero_content .hero_para {
+  font-size: 0.875rem;
   color: #a1a1a1;
 }
 .app #hero .hero_container .hero_content .hero_para::-moz-selection {
@@ -333,6 +334,8 @@ picture {
 
 @media (max-width: 78.125rem) {
   .app .main_header {
+    position: relative;
+    z-index: 555;
     width: clamp(23.5rem, 100vw, 78.125rem);
     grid-template-columns: repeat(12, 1fr);
   }
@@ -344,39 +347,56 @@ picture {
     grid-column: 9/12;
     gap: 1rem;
   }
+  .app nav {
+    position: relative;
+    z-index: 555;
+  }
   .app #hero {
     overflow: hidden;
-    align-items: start;
-    height: calc(100vh - 150px);
+    align-items: flex-start;
+    height: calc(100vh - 140px);
   }
   .app #hero .hero_container {
     display: block;
     position: relative;
+    height: inherit;
   }
-  .app #hero .hero_container .hero_content {
+  .app #hero .hero_container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
     width: 100%;
-    height: calc(100vh - 150px);
+    height: 100%;
     -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
+  }
+  .app #hero .hero_container .hero_content {
+    padding: 0 3.125rem;
+    width: 100%;
+    height: inherit;
     position: absolute;
-    top: 50%;
-    left: 55px;
-    transform: translateY(25%);
     z-index: 10;
+    top: 50%;
+    transform: translateY(-40%);
+    left: 0;
   }
   .app #hero .hero_container .hero_images {
     width: 100%;
+    height: inherit;
     position: fixed;
-    right: -400px;
-    top: 50%;
-    transform: translateY(-35%);
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -60%);
     z-index: 9;
   }
   .app #hero .hero_container .hero_images img {
     display: none;
   }
   .app #hero .hero_container .hero_images .hero_second_img {
-    flex: 0 1 auto;
+    flex: 0 0 auto;
+    aspect-ratio: 16/9;
     -o-object-fit: contain;
        object-fit: contain;
     display: block;
@@ -472,11 +492,27 @@ picture {
   .app nav ul li a span {
     display: none;
   }
+  .app #hero .hero_container .hero_images {
+    left: 50%;
+    top: 50%;
+    transform: translate(-40%, -100%);
+  }
+  .app #hero .hero_container .hero_images .hero_second_img {
+    width: 80%;
+  }
 }
 @media (max-width: 23.5rem) {
   .app .main_header {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .app #hero .hero_container .hero_images {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -95%) rotate(5deg);
+  }
+  .app #hero .hero_container .hero_images .hero_second_img {
+    width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */

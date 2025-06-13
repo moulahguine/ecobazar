@@ -21,7 +21,7 @@
         // small title
         .co_title {
           font-weight: 500;
-          font-size: $body-lg-400;
+          @include clamp-font($body-sm-400, $body-md-400, $body-lg-400);
           color: $green-primary;
           text-transform: uppercase;
           @include selection($green-primary, $white);
@@ -37,7 +37,11 @@
           @include selection($green-primary, $white);
         }
         .hero_discount {
-          font-size: $heading-02-400;
+          @include clamp-font(
+            $heading-04-400,
+            $heading-03-400,
+            $heading-02-400
+          );
           margin-top: 20px;
           span {
             font-family: sans-serif;
@@ -49,6 +53,7 @@
           @include selection($green-primary, $white);
         }
         .hero_para {
+          @include clamp-font($body-sm-400, $body-md-400, $body-lg-400);
           color: $gray-light;
           @include selection($green-primary, $white);
         }
