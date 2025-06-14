@@ -354,7 +354,7 @@ picture {
   .app #hero {
     overflow: hidden;
     align-items: flex-start;
-    height: calc(100vh - 140px);
+    height: calc(100vh - 100px);
   }
   .app #hero .hero_container {
     display: block;
