@@ -6,8 +6,6 @@
   .app {
     //  header
     .main_header {
-      position: relative;
-      z-index: 555;
       width: clamp($small-screen, 100vw, $small-desktop);
       grid-template-columns: repeat(12, 1fr);
       // form
@@ -21,10 +19,6 @@
         gap: $body-lg-400;
       }
     }
-    nav {
-      position: relative;
-      z-index: 555;
-    }
     // hero section
     #hero {
       overflow: hidden;
@@ -34,22 +28,23 @@
       .hero_container {
         display: block;
         position: relative;
+        width: 100%;
         height: inherit;
-
+        margin-top: 0;
         &::after {
           content: "";
           position: absolute;
           top: 0;
           left: 0;
           z-index: 9;
-          width: 100%;
+          width: inherit;
           height: 100%;
           backdrop-filter: blur(5px);
         }
 
         .hero_content {
           padding: 0 3.125rem; // 50px
-          width: 100%;
+          width: inherit;
           height: inherit;
           position: absolute;
           z-index: 10;
@@ -59,14 +54,13 @@
         }
 
         .hero_images {
-          width: 100%;
+          width: $small-desktop;
           height: inherit;
           position: fixed;
-          left: 50%;
-          top: 0;
-          transform: translate(-50%, -60%);
-          z-index: 9;
-
+          top: 50%;
+          right: -1000px;
+          transform: translateY(-70%);
+          z-index: 1;
           img {
             display: none;
           }
@@ -76,7 +70,7 @@
             aspect-ratio: 16 / 9;
             object-fit: contain;
             display: block;
-            width: 100%;
+            width: 400px;
           }
         }
       }
@@ -96,7 +90,7 @@
       width: 100%;
       height: 100vh;
       position: fixed;
-      z-index: 3;
+      z-index: 559;
       display: none;
     }
     &.search_layout::before {
@@ -115,7 +109,7 @@
         top: 130px;
         left: 50%;
         transform: translateX(-50%);
-        z-index: 4;
+        z-index: 560;
       }
       .cart_wrapper {
         grid-column: 5/8;
@@ -197,19 +191,6 @@
         }
       }
     }
-    #hero {
-      .hero_container {
-        .hero_images {
-          left: 50%;
-          top: 50%;
-          transform: translate(-40%, -100%);
-
-          .hero_second_img {
-            width: 80%;
-          }
-        }
-      }
-    }
   }
 }
 
@@ -224,13 +205,7 @@
     #hero {
       .hero_container {
         .hero_images {
-          left: 50%;
-          top: 50%;
-          transform: translate(-50%, -95%) rotate(5deg);
-
-          .hero_second_img {
-            width: 100%;
-          }
+          transform: translateY(-80%);
         }
       }
     }
