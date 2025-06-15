@@ -6,7 +6,7 @@
   #hero {
     overflow: hidden;
     width: 100%;
-    height: calc(100vh - 150px);
+    height: 800px;
     background-color: $hero;
     @include flex-center;
     justify-content: center;

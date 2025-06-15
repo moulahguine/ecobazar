@@ -214,7 +214,7 @@ picture {
 .app #hero {
   overflow: hidden;
   width: 100%;
-  height: calc(100vh - 150px);
+  height: 800px;
   background-color: #edf2ee;
   display: flex;
   align-items: center;
@@ -352,7 +352,6 @@ picture {
   .app #hero {
     overflow: hidden;
     align-items: flex-start;
-    height: 800px;
   }
   .app #hero .hero_container {
     display: block;
@@ -369,34 +368,28 @@ picture {
     z-index: 9;
     width: 100%;
     height: 100%;
-    -webkit-backdrop-filter: blur(15px);
-            backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
   }
   .app #hero .hero_container .hero_content {
-    padding: 0 3.125rem;
-    width: inherit;
-    height: inherit;
     position: absolute;
     z-index: 10;
     top: 50%;
-    transform: translateY(-30%);
-    left: 0;
+    left: 150px;
+    transform: translateY(-50%);
   }
   .app #hero .hero_container .hero_images {
     width: 78.125rem;
-    height: inherit;
     position: fixed;
     top: 50%;
     right: -900px;
     transform: translateY(-50%);
-    z-index: 1;
   }
   .app #hero .hero_container .hero_images img {
     display: none;
   }
   .app #hero .hero_container .hero_images .hero_second_img {
     flex: 0 0 auto;
-    aspect-ratio: 16/9;
     -o-object-fit: contain;
        object-fit: contain;
     display: block;
@@ -492,14 +485,30 @@ picture {
   .app nav ul li a span {
     display: none;
   }
+  .app #hero .hero_container .hero_content {
+    left: 50px;
+  }
+  .app #hero .hero_container .hero_content .co_title {
+    border-radius: 15px 0 15px 0s;
+    background-color: #00b207;
+    width: -moz-fit-content;
+    width: fit-content;
+    color: #ffffff;
+    padding: 0 15px;
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+  .app #hero .hero_container .hero_content .hero_para {
+    text-shadow: 1px 1px 0px #1b1b1b;
+  }
+  .app #hero .hero_container .hero_images {
+    transform: translateY(-50%);
+  }
 }
 @media (max-width: 23.5rem) {
   .app .main_header {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  .app #hero .hero_container .hero_images {
-    transform: translateY(-50%);
   }
 }/*# sourceMappingURL=main.css.map */
