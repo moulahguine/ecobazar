@@ -211,8 +211,10 @@ picture {
   gap: 0;
 }
 
-.app #hero {
+.app {
   overflow: hidden;
+}
+.app #hero {
   width: 100%;
   height: 800px;
   background-color: #edf2ee;

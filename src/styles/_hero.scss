@@ -3,8 +3,8 @@
 
 .app {
   // hero section
+  overflow: hidden;
   #hero {
-    overflow: hidden;
     width: 100%;
     height: 800px;
     background-color: $hero;
