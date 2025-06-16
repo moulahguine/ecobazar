@@ -55,6 +55,7 @@ const feature = [
     '<img src="/icons/feature icons/deliveryTruck.png" alt="delivery truck" />',
     "Free Shipping",
     "Free shipping on all your order",
+
     1
   ),
   new Feature(
