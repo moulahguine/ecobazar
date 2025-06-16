@@ -93,7 +93,35 @@
           display: none;
         }
       }
-      // hero features
+    }
+    // hero features
+    .hero_features {
+      border-radius: 10px;
+      margin: 50px;
+      border-bottom: $green-primary 1px solid;
+      width: 1400px;
+      padding: $heading-01-400;
+      background-color: $white;
+      display: flex;
+      justify-content: space-between;
+      .feature {
+        display: flex;
+        gap: 20px;
+        .icon {
+          width: $heading-01-400;
+        }
+        .text {
+          line-height: 1.6;
+          strong {
+            color: $black;
+            font-size: $body-md-400;
+          }
+          p {
+            font-size: $body-sm-400;
+            color: $gray-light;
+          }
+        }
+      }
     }
   }
 }

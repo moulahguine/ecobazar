@@ -333,6 +333,34 @@ picture {
 .app #hero .hero_container .hero_images .hero_second_img {
   display: none;
 }
+.app #hero .hero_features {
+  border-radius: 10px;
+  margin: 50px;
+  border-bottom: #00b207 1px solid;
+  width: 1400px;
+  padding: 2.5rem;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+}
+.app #hero .hero_features .feature {
+  display: flex;
+  gap: 20px;
+}
+.app #hero .hero_features .feature .icon {
+  width: 2.5rem;
+}
+.app #hero .hero_features .feature .text {
+  line-height: 1.6;
+}
+.app #hero .hero_features .feature .text strong {
+  color: #1b1b1b;
+  font-size: 0.875rem;
+}
+.app #hero .hero_features .feature .text p {
+  font-size: 0.75rem;
+  color: #a1a1a1;
+}
 
 @media (max-width: 78.125rem) {
   .app .main_header {
