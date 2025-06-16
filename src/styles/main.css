@@ -413,9 +413,9 @@ picture {
   .app #hero .hero_container .hero_content {
     position: absolute;
     z-index: 10;
-    top: 50%;
+    top: 20%;
     left: 150px;
-    transform: translateY(-50%);
+    transform: translateY(-20%);
   }
   .app #hero .hero_container .hero_images {
     width: 78.125rem;
@@ -541,7 +541,7 @@ picture {
     bottom: -100px;
   }
 }
-@media (max-width: 49.1875rem) {
+@media (max-width: 850px) {
   .app #hero .hero_features {
     bottom: -200px;
     justify-content: center;
