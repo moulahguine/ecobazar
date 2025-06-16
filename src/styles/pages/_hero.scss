@@ -1,5 +1,5 @@
-@use "variables" as *;
-@use "mixins" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .app {
   // hero section
@@ -96,15 +96,23 @@
     }
     // hero features
     .hero_features {
+      cursor: default;
+      position: absolute;
+      bottom: -70px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 55;
       border-radius: 10px;
-      margin: 50px;
       border-bottom: $green-primary 1px solid;
-      width: 1400px;
+      width: clamp(376px, 80vw, 1400px);
       padding: $heading-01-400;
       background-color: $white;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 40px;
       .feature {
+        width: 276px;
         display: flex;
         gap: 20px;
         .icon {

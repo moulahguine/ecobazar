@@ -1,0 +1,95 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// small-desktop === 1250 // 12
+@media (max-width: $small-desktop) {
+  .app {
+    #hero {
+      overflow: hidden;
+      align-items: flex-start;
+      .hero_container {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: inherit;
+        margin-top: 0;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 9;
+          width: 100%;
+          height: 100%;
+          backdrop-filter: blur(5px);
+        }
+
+        .hero_content {
+          position: absolute;
+          z-index: 10;
+          top: 50%;
+          left: 150px;
+          transform: translateY(-50%);
+        }
+
+        .hero_images {
+          width: $small-desktop;
+          position: absolute;
+          top: 50%;
+          right: -900px;
+          transform: translateY(-50%);
+          img {
+            display: none;
+          }
+
+          .hero_second_img {
+            flex: 0 0 auto;
+            object-fit: contain;
+            display: block;
+            width: 400px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// tablet-screen === 1080 // 8
+// @media (max-width: $tablet-screen) {
+//   .app {
+//   }
+// }
+
+// phone-screen === 787 //6
+@media (max-width: $phone-screen) {
+  .app {
+    #hero {
+      .hero_container {
+        .hero_content {
+          left: 50px;
+          .co_title {
+            border-radius: 15px 0 15px 0s;
+            background-color: $green-primary;
+            width: fit-content;
+            color: $white;
+            padding: 0 15px;
+            font-weight: $font-weight-semibold;
+            font-size: $heading-05-400;
+          }
+          .hero_para {
+            text-shadow: 1px 1px 0px $black;
+          }
+        }
+        .hero_images {
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}
+
+// $small-screen: 376px; //4
+// @media (max-width: $small-screen) {
+//   .app {
+//   }
+// }

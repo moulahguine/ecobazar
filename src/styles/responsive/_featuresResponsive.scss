@@ -1,0 +1,44 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// small-desktop === 1250 // 12
+@media (max-width: $small-desktop) {
+  .app {
+    #hero {
+      .hero_features {
+        position: absolute;
+        bottom: -100px;
+      }
+    }
+  }
+}
+
+// tablet-screen === 1080 // 8
+@media (max-width: $tablet-screen) {
+  .app {
+    #hero {
+      .hero_features {
+        position: absolute;
+        bottom: -100px;
+      }
+    }
+  }
+}
+
+// phone-screen === 787 //6
+@media (max-width: $phone-screen) {
+  .app {
+    #hero {
+      .hero_features {
+        bottom: -200px;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+// $small-screen: 376px; //4
+// @media (max-width: $small-screen) {
+//   .app {
+//   }
+// }

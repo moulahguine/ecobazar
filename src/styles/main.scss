@@ -1,5 +1,21 @@
-@use "reset";
-@use "header";
-@use "navigation";
-@use "hero";
-@use "responsive";
+// Base
+@use "base/reset";
+
+// Layout
+@use "layout/layout";
+@use "layout/header";
+@use "layout/navigation";
+@use "layout/footer";
+
+// Pages
+@use "pages/hero";
+@use "pages/cart";
+@use "pages/product";
+@use "pages/home";
+@use "pages/shop";
+
+// Responsive
+@use "./responsive/heroResponsive";
+@use "./responsive/headerResponsive";
+@use "./responsive/featuresResponsive";
+@use "./responsive/navResponsive";

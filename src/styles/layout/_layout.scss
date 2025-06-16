@@ -1,0 +1,23 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// tablet-screen === 1080 // 8
+@media (max-width: $tablet-screen) {
+  .app {
+    position: relative;
+    // layout behind search
+
+    &::before {
+      content: "";
+      background-color: #00000091;
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      z-index: 559;
+      display: none;
+    }
+    &.search_layout::before {
+      display: block;
+    }
+  }
+}

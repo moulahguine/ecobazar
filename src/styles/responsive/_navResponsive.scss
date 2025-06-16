@@ -1,0 +1,55 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// small-desktop === 1250 // 12
+// @media (max-width: $small-desktop) {
+//   .app {
+//   }
+// }
+
+// tablet-screen === 1080 // 8
+@media (max-width: $tablet-screen) {
+  .app {
+    nav {
+      width: clamp(375px, 100vw, $tablet-screen);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      .support_num {
+        display: none;
+      }
+    }
+  }
+}
+
+// phone-screen === 787 //6
+@media (max-width: $phone-screen) {
+  .app {
+    nav {
+      width: clamp(375px, 100vw, $tablet-screen);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      ul {
+        li {
+          a {
+            i {
+              display: block !important;
+            }
+            span {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// $small-screen: 376px; //4
+// @media (max-width: $small-screen) {
+//   .app {
+//   }
+// }

@@ -1,0 +1,100 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// small-desktop === 1250 // 12
+@media (max-width: $small-desktop) {
+  .app {
+    .main_header {
+      width: clamp($small-screen, 100vw, $small-desktop);
+      grid-template-columns: repeat(12, 1fr);
+      form {
+        grid-column: 6/9;
+        width: clamp(375px, 50vw, $tablet-screen);
+      }
+      .cart_wrapper {
+        grid-column: 9/12;
+        gap: $body-lg-400;
+      }
+    }
+  }
+}
+
+// tablet-screen === 1080 // 8
+@media (max-width: $tablet-screen) {
+  .app {
+    // header
+    .main_header {
+      grid-template-columns: repeat(8, 1fr);
+      .logo {
+        grid-column: 2/3;
+      }
+      form {
+        display: none;
+        position: fixed;
+        transition: all 0.3s ease-in-out;
+        top: 130px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 560;
+      }
+      .cart_wrapper {
+        grid-column: 5/8;
+        // i add search icon for small screen
+        .search_btn_sscreen {
+          i {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+// phone-screen === 787 //6
+@media (max-width: $phone-screen) {
+  .app {
+    //header
+    .main_header {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      .logo {
+        gap: 5px;
+        img {
+          width: $heading-04-400;
+        }
+        h3 {
+          font-size: $heading-04-400;
+        }
+      }
+      .cart_wrapper {
+        gap: 5px;
+        .search_btn_sscreen {
+          font-size: $body-md-400;
+        }
+        .fav_products_box,
+        .cart {
+          img {
+            width: $heading-03-400;
+          }
+        }
+        .cart {
+          .cost_products {
+            font-size: $body-md-400;
+          }
+        }
+      }
+    }
+  }
+}
+
+// $small-screen: 376px; //4
+@media (max-width: $small-screen) {
+  .app {
+    .main_header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
