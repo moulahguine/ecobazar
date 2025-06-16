@@ -1,3 +1,5 @@
+// add autoscroll functionality to hero images every 5 seconds
+
 const heroImages = document.querySelector(".hero_images");
 
 if (heroImages) {
@@ -19,20 +21,24 @@ if (heroImages) {
   }, 5000);
 }
 
-//==================================
+// This class represents a single feature in the hero section
 
-class Features {
+class Feature {
+  index: number;
   icon: string;
   title: string;
   subtitle: string;
-  constructor(icon: string, title: string, subtitle: string) {
+
+  constructor(icon: string, title: string, subtitle: string, index: number) {
+    this.index = index;
     this.icon = icon;
     this.title = title;
     this.subtitle = subtitle;
   }
+
   createElement(): HTMLElement {
     const div = document.createElement("div");
-    div.className = "feature_item";
+    div.className = `feature feature-${this.index}`;
     div.innerHTML = `
       <span class="icon">${this.icon}</span>
       <div class="text">
@@ -44,32 +50,36 @@ class Features {
   }
 }
 
-const features = [
-  new Features(
+const feature = [
+  new Feature(
     '<img src="/icons/feature icons/deliveryTruck.png" alt="delivery truck" />',
     "Free Shipping",
-    "Free shipping on all your order"
+    "Free shipping on all your order",
+    1
   ),
-  new Features(
+  new Feature(
     '<img src="/icons/feature icons/headphones.png" alt="head phone" />',
     "Customer Support 24/7",
-    "Instant access to Support"
+    "Instant access to Support",
+    2
   ),
-  new Features(
+  new Feature(
     '<img src="/icons/feature icons/package.png" alt="package" />',
     "100% Secure Payment",
-    "We ensure your money is save"
+    "We ensure your money is save",
+    3
   ),
-  new Features(
+  new Feature(
     '<img src="/icons/feature icons/shoppingBag.png" alt="shoppung bag" />',
     "Money-Back Guarantee",
-    "30 Days Money-Back Guarantee"
+    "30 Days Money-Back Guarantee",
+    4
   ),
 ];
 
 const container = document.querySelector<HTMLDivElement>(".hero_features");
 if (container) {
-  features.forEach((feature) => {
+  feature.forEach((feature, i) => {
     container.appendChild(feature.createElement());
   });
 }

@@ -3,14 +3,12 @@
 
 .app {
   // hero section
-  overflow: hidden;
   #hero {
     width: 100%;
     height: 800px;
     background-color: $hero;
     @include flex-center;
-    justify-content: center;
-    align-items: self-start;
+    flex-direction: column;
     // container
     .hero_container {
       margin-top: 150px;
@@ -21,7 +19,6 @@
       // content info
       .hero_content {
         grid-column: 2/6;
-        // small title
         .co_title {
           font-weight: 500;
           @include clamp-font($body-sm-400, $body-md-400, $body-lg-400);
@@ -29,7 +26,6 @@
           text-transform: uppercase;
           @include selection($green-primary, $white);
         }
-        // big title
         .main_title {
           font-family: sans-serif;
           font-weight: $font-bold;
@@ -78,6 +74,7 @@
           }
         }
       }
+      // main hero img
       .hero_images {
         grid-column: 6/12;
         display: flex;
@@ -96,6 +93,7 @@
           display: none;
         }
       }
+      // hero features
     }
   }
 }
