@@ -360,17 +360,22 @@ picture {
   border-radius: 10px;
   border-bottom: #00b207 1px solid;
   width: clamp(376px, 80vw, 1400px);
-  padding: 2.5rem;
   background-color: #ffffff;
   display: flex;
-  justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 40px;
 }
 .app #hero .hero_features .feature {
-  width: 276px;
+  padding: 2.5rem;
+  flex: 1 0 300px;
   display: flex;
+  justify-content: center;
   gap: 20px;
+  transition: all 0.3s ease;
+}
+.app #hero .hero_features .feature:hover {
+  background-color: #a5d5a5;
+  transform: scale(1.2);
+  border-radius: 10px;
 }
 .app #hero .hero_features .feature .icon {
   width: 2.5rem;

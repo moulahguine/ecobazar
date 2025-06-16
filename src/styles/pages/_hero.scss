@@ -105,16 +105,21 @@
       border-radius: 10px;
       border-bottom: $green-primary 1px solid;
       width: clamp(376px, 80vw, 1400px);
-      padding: $heading-01-400;
       background-color: $white;
       display: flex;
-      justify-content: space-evenly;
       flex-wrap: wrap;
-      gap: 40px;
       .feature {
-        width: 276px;
+        padding: $heading-01-400;
+        flex: 1 0 300px;
         display: flex;
+        justify-content: center;
         gap: 20px;
+        transition: all 0.3s ease;
+        &:hover {
+          background-color: $green-gray-3;
+          transform: scale(1.2);
+          border-radius: 10px;
+        }
         .icon {
           width: $heading-01-400;
         }
