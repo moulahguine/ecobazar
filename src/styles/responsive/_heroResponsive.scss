@@ -1,11 +1,26 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
+@media (min-width: $small-desktop) and (max-width: 1390px) {
+  .app {
+    #hero {
+      .hero_container {
+        .hero_content {
+          grid-column: 1/7;
+        }
+        .hero_images {
+          grid-column: 7/13;
+        }
+      }
+    }
+  }
+}
+
 // small-desktop === 1250 // 12
 @media (max-width: $small-desktop) {
   .app {
     #hero {
-      overflow: hidden;
+      overflow-x: hidden;
       align-items: flex-start;
       .hero_container {
         display: block;
@@ -36,7 +51,7 @@
           width: $small-desktop;
           position: absolute;
           top: 50%;
-          right: -900px;
+          right: -850px;
           transform: translateY(-50%);
           img {
             display: none;

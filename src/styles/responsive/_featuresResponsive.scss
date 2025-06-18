@@ -14,16 +14,10 @@
 }
 
 // tablet-screen === 1080 // 8
-@media (max-width: $tablet-screen) {
-  .app {
-    #hero {
-      .hero_features {
-        position: absolute;
-        bottom: -100px;
-      }
-    }
-  }
-}
+// @media (max-width: $tablet-screen) {
+//   .app {
+//   }
+// }
 
 // phone-screen === 787 //6
 @media (max-width: 850px) {
