@@ -101,7 +101,7 @@
       bottom: -70px;
       left: 50%;
       transform: translateX(-50%);
-      width: clamp(376px, 80vw, 1400px);
+      width: clamp(265px, 80vw, 1400px);
       background-color: $white;
       border-radius: 10px;
       border-bottom: $green-primary 1px solid;
@@ -112,7 +112,7 @@
         display: flex;
         justify-content: center;
         gap: 20px;
-        flex: 1 0 300px;
+        flex: 1 0 265px;
         padding: $heading-01-400;
         transition: all 0.3s ease;
         &:hover {

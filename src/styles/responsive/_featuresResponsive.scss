@@ -26,6 +26,22 @@
       .hero_features {
         bottom: -200px;
         justify-content: center;
+        .feature {
+          justify-content: flex-start;
+          padding: $heading-03-400;
+          .icon {
+            width: $heading-02-400;
+          }
+          .text {
+            line-height: 1.6;
+            strong {
+              font-size: $body-sm-400;
+            }
+            p {
+              font-size: 11px;
+            }
+          }
+        }
       }
     }
   }

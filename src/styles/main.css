@@ -356,7 +356,7 @@ picture {
   bottom: -70px;
   left: 50%;
   transform: translateX(-50%);
-  width: clamp(376px, 80vw, 1400px);
+  width: clamp(265px, 80vw, 1400px);
   background-color: #ffffff;
   border-radius: 10px;
   border-bottom: #00b207 1px solid;
@@ -368,7 +368,7 @@ picture {
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex: 1 0 300px;
+  flex: 1 0 265px;
   padding: 2.5rem;
   transition: all 0.3s ease;
 }
@@ -450,11 +450,13 @@ picture {
 }
 @media (max-width: 49.1875rem) {
   .app #hero .hero_container .hero_content {
-    left: 50px;
+    left: 25px;
+    right: 25px;
   }
   .app #hero .hero_container .hero_content .co_title {
-    border-radius: 15px 0 15px 0s;
+    margin: 0 auto;
     background-color: #00b207;
+    border-radius: 15px 15px 0 0;
     width: -moz-fit-content;
     width: fit-content;
     color: #ffffff;
@@ -462,8 +464,12 @@ picture {
     font-weight: 600;
     font-size: 1.25rem;
   }
+  .app #hero .hero_container .hero_content .hero_discount {
+    margin-top: 15px;
+    color: #1b1b1b;
+  }
   .app #hero .hero_container .hero_content .hero_para {
-    text-shadow: 1px 1px 0px #1b1b1b;
+    text-shadow: 1px 0px 1px #1d331d;
   }
   .app #hero .hero_container .hero_images {
     transform: translateY(-50%);
@@ -552,6 +558,22 @@ picture {
   .app #hero .hero_features {
     bottom: -200px;
     justify-content: center;
+  }
+  .app #hero .hero_features .feature {
+    justify-content: flex-start;
+    padding: 1.75rem;
+  }
+  .app #hero .hero_features .feature .icon {
+    width: 2rem;
+  }
+  .app #hero .hero_features .feature .text {
+    line-height: 1.6;
+  }
+  .app #hero .hero_features .feature .text strong {
+    font-size: 0.75rem;
+  }
+  .app #hero .hero_features .feature .text p {
+    font-size: 11px;
   }
 }
 @media (max-width: 67.5rem) {

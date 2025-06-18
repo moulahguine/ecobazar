@@ -81,18 +81,24 @@
     #hero {
       .hero_container {
         .hero_content {
-          left: 50px;
+          left: 25px;
+          right: 25px;
           .co_title {
-            border-radius: 15px 0 15px 0s;
+            margin: 0 auto;
             background-color: $green-primary;
+            border-radius: 15px 15px 0 0;
             width: fit-content;
             color: $white;
             padding: 0 15px;
             font-weight: $font-weight-semibold;
             font-size: $heading-05-400;
           }
+          .hero_discount {
+            margin-top: 15px;
+            color: $black;
+          }
           .hero_para {
-            text-shadow: 1px 1px 0px $black;
+            text-shadow: 1px 0px 1px $green-gray-8;
           }
         }
         .hero_images {
